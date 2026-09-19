@@ -1,0 +1,3087 @@
+{
+  "start": "2025-09-15",
+  "counts": [
+    2,
+    37,
+    9,
+    6,
+    16,
+    0,
+    0,
+    5,
+    12,
+    10,
+    0,
+    7,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    12,
+    21,
+    5,
+    9,
+    17,
+    5,
+    0,
+    34,
+    53,
+    40,
+    1,
+    0,
+    11,
+    6,
+    52,
+    29,
+    32,
+    62,
+    0,
+    0,
+    56,
+    20,
+    57,
+    50,
+    40,
+    0,
+    0,
+    18,
+    31,
+    1,
+    11,
+    21,
+    0,
+    0,
+    38,
+    43,
+    52,
+    47,
+    53,
+    0,
+    0,
+    28,
+    41,
+    29,
+    16,
+    0,
+    0,
+    0,
+    0,
+    0,
+    29,
+    2,
+    24,
+    0,
+    6,
+    14,
+    19,
+    23,
+    15,
+    38,
+    3,
+    1,
+    30,
+    8,
+    0,
+    0,
+    0,
+    5,
+    0,
+    11,
+    0,
+    0,
+    0,
+    0,
+    19,
+    4,
+    47,
+    41,
+    54,
+    16,
+    46,
+    0,
+    0,
+    11,
+    17,
+    19,
+    9,
+    65,
+    0,
+    0,
+    14,
+    16,
+    16,
+    22,
+    9,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    38,
+    11,
+    4,
+    11,
+    0,
+    0,
+    57,
+    46,
+    56,
+    45,
+    4,
+    0,
+    0,
+    10,
+    9,
+    7,
+    31,
+    10,
+    0,
+    0,
+    5,
+    16,
+    0,
+    32,
+    10,
+    0,
+    0,
+    19,
+    0,
+    10,
+    59,
+    11,
+    0,
+    0,
+    16,
+    37,
+    14,
+    19,
+    14,
+    0,
+    0,
+    36,
+    43,
+    31,
+    25,
+    33,
+    0,
+    0,
+    33,
+    51,
+    34,
+    0,
+    41,
+    0,
+    0,
+    15,
+    2,
+    59,
+    35,
+    8,
+    0,
+    0,
+    8,
+    31,
+    55,
+    47,
+    7,
+    0,
+    0,
+    22,
+    36,
+    28,
+    26,
+    14,
+    0,
+    0,
+    13,
+    43,
+    14,
+    24,
+    12,
+    0,
+    0,
+    12,
+    45,
+    30,
+    13,
+    3,
+    0,
+    0,
+    64,
+    83,
+    36,
+    18,
+    0,
+    0,
+    0,
+    45,
+    74,
+    58,
+    14,
+    6,
+    0,
+    0,
+    56,
+    87,
+    27,
+    40,
+    25,
+    0,
+    0,
+    11,
+    24,
+    39,
+    27,
+    32,
+    0,
+    0,
+    54,
+    0,
+    0,
+    8,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    31,
+    15,
+    41,
+    2,
+    9,
+    0,
+    0,
+    28,
+    16,
+    29,
+    10,
+    33,
+    0,
+    0,
+    25,
+    57,
+    25,
+    13,
+    17,
+    0,
+    0,
+    22,
+    23,
+    8,
+    32,
+    16,
+    0,
+    0,
+    23,
+    0,
+    20,
+    53,
+    28,
+    0,
+    0,
+    0,
+    29,
+    6,
+    22,
+    20,
+    0,
+    1,
+    29,
+    33,
+    22,
+    25,
+    9,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    20,
+    28,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    66,
+    30,
+    27,
+    24,
+    12,
+    65,
+    37,
+    43,
+    27,
+    57,
+    9,
+    15,
+    12,
+    17,
+    6,
+    5,
+    0,
+    0,
+    0,
+    38,
+    51,
+    43,
+    26,
+    26,
+    0,
+    0,
+    25,
+    26,
+    3,
+    11,
+    3,
+    10
+  ],
+  "details": [
+    {
+      "github": 0,
+      "gitlab": 2,
+      "gitlabByType": {
+        "merge_request": 1,
+        "push": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 37,
+      "gitlabByType": {
+        "push": 22,
+        "merge_request": 3,
+        "commentaire": 12
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "push": 8,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 6,
+      "gitlabByType": {
+        "commentaire": 5,
+        "push": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "push": 14,
+        "autre": 1,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "push": 3,
+        "issue": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 12,
+      "gitlabByType": {
+        "push": 6,
+        "merge_request": 4,
+        "autre": 1,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 10,
+      "gitlabByType": {
+        "commentaire": 2,
+        "push": 8
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 7,
+      "gitlabByType": {
+        "push": 4,
+        "autre": 2,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 3,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 12,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 7,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 21,
+      "gitlabByType": {
+        "push": 9,
+        "merge_request": 6,
+        "autre": 4,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "push": 1,
+        "merge_request": 2,
+        "autre": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 5,
+        "autre": 1,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 17,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 9,
+        "commentaire": 1,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 34,
+      "gitlabByType": {
+        "push": 19,
+        "merge_request": 4,
+        "autre": 5,
+        "commentaire": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 53,
+      "gitlabByType": {
+        "push": 13,
+        "commentaire": 35,
+        "autre": 2,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 40,
+      "gitlabByType": {
+        "push": 25,
+        "merge_request": 4,
+        "autre": 8,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 1,
+      "gitlabByType": {
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "push": 5,
+        "commentaire": 5,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 6,
+      "gitlabByType": {
+        "commentaire": 1,
+        "push": 4,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 52,
+      "gitlabByType": {
+        "push": 32,
+        "merge_request": 8,
+        "commentaire": 5,
+        "autre": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 29,
+      "gitlabByType": {
+        "push": 20,
+        "merge_request": 5,
+        "commentaire": 1,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 32,
+      "gitlabByType": {
+        "merge_request": 11,
+        "push": 14,
+        "autre": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 62,
+      "gitlabByType": {
+        "push": 35,
+        "merge_request": 13,
+        "autre": 6,
+        "commentaire": 4,
+        "issue": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 56,
+      "gitlabByType": {
+        "push": 34,
+        "merge_request": 11,
+        "autre": 9,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 20,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 11,
+        "autre": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 57,
+      "gitlabByType": {
+        "push": 29,
+        "merge_request": 16,
+        "commentaire": 3,
+        "autre": 9
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 50,
+      "gitlabByType": {
+        "push": 33,
+        "autre": 10,
+        "merge_request": 5,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 40,
+      "gitlabByType": {
+        "push": 24,
+        "autre": 5,
+        "merge_request": 6,
+        "commentaire": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 18,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 11,
+        "autre": 2,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 31,
+      "gitlabByType": {
+        "push": 11,
+        "merge_request": 13,
+        "autre": 6,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 1,
+      "gitlabByType": {
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 8
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 21,
+      "gitlabByType": {
+        "commentaire": 16,
+        "push": 3,
+        "autre": 1,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 38,
+      "gitlabByType": {
+        "merge_request": 5,
+        "push": 8,
+        "autre": 3,
+        "commentaire": 22
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 43,
+      "gitlabByType": {
+        "push": 12,
+        "merge_request": 3,
+        "autre": 2,
+        "commentaire": 26
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 52,
+      "gitlabByType": {
+        "merge_request": 10,
+        "commentaire": 4,
+        "push": 21,
+        "autre": 17
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 47,
+      "gitlabByType": {
+        "push": 29,
+        "merge_request": 11,
+        "commentaire": 1,
+        "autre": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 53,
+      "gitlabByType": {
+        "merge_request": 16,
+        "commentaire": 4,
+        "push": 21,
+        "autre": 12
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 28,
+      "gitlabByType": {
+        "autre": 6,
+        "push": 10,
+        "merge_request": 9,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 41,
+      "gitlabByType": {
+        "push": 23,
+        "autre": 4,
+        "merge_request": 11,
+        "issue": 1,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 29,
+      "gitlabByType": {
+        "push": 19,
+        "autre": 1,
+        "merge_request": 8,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "push": 10,
+        "autre": 3,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 29,
+      "gitlabByType": {
+        "push": 14,
+        "autre": 6,
+        "merge_request": 6,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 2,
+      "gitlabByType": {
+        "push": 1,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 24,
+      "gitlabByType": {
+        "push": 12,
+        "merge_request": 6,
+        "commentaire": 3,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 6,
+      "gitlabByType": {
+        "commentaire": 1,
+        "push": 3,
+        "merge_request": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 14,
+      "gitlabByType": {
+        "push": 8,
+        "commentaire": 2,
+        "autre": 2,
+        "merge_request": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 19,
+      "gitlabByType": {
+        "merge_request": 7,
+        "push": 9,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 23,
+      "gitlabByType": {
+        "merge_request": 7,
+        "push": 10,
+        "autre": 2,
+        "commentaire": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 15,
+      "gitlabByType": {
+        "push": 9,
+        "merge_request": 4,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 38,
+      "gitlabByType": {
+        "push": 21,
+        "issue": 1,
+        "merge_request": 5,
+        "autre": 8,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 3,
+      "gitlabByType": {
+        "push": 2,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 1,
+      "gitlabByType": {
+        "push": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 30,
+      "gitlabByType": {
+        "push": 10,
+        "autre": 2,
+        "merge_request": 9,
+        "commentaire": 9
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 8,
+      "gitlabByType": {
+        "push": 6,
+        "merge_request": 1,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "autre": 2,
+        "push": 2,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "push": 8,
+        "autre": 1,
+        "merge_request": 1,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 19,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 10,
+        "autre": 4,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 4,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 47,
+      "gitlabByType": {
+        "merge_request": 14,
+        "push": 20,
+        "commentaire": 7,
+        "autre": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 41,
+      "gitlabByType": {
+        "push": 30,
+        "autre": 4,
+        "merge_request": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 54,
+      "gitlabByType": {
+        "push": 50,
+        "autre": 2,
+        "merge_request": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 5,
+        "push": 8,
+        "issue": 1,
+        "autre": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 46,
+      "gitlabByType": {
+        "push": 32,
+        "autre": 4,
+        "merge_request": 10
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "push": 5,
+        "autre": 3,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 17,
+      "gitlabByType": {
+        "merge_request": 5,
+        "push": 5,
+        "autre": 2,
+        "commentaire": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 19,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 7,
+        "autre": 2,
+        "commentaire": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 5,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 65,
+      "gitlabByType": {
+        "merge_request": 18,
+        "push": 29,
+        "autre": 12,
+        "commentaire": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 14,
+      "gitlabByType": {
+        "merge_request": 6,
+        "autre": 2,
+        "push": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 5,
+        "autre": 2,
+        "push": 7,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "autre": 2,
+        "push": 9,
+        "merge_request": 4,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 22,
+      "gitlabByType": {
+        "autre": 6,
+        "merge_request": 8,
+        "push": 8
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 2,
+        "commentaire": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "push": 2,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 8,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 3,
+        "commentaire": 1,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 38,
+      "gitlabByType": {
+        "commentaire": 4,
+        "autre": 16,
+        "push": 13,
+        "merge_request": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 6,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 4,
+      "gitlabByType": {
+        "push": 3,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "push": 6,
+        "autre": 2,
+        "merge_request": 2,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 57,
+      "gitlabByType": {
+        "autre": 8,
+        "push": 27,
+        "merge_request": 19,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 46,
+      "gitlabByType": {
+        "autre": 11,
+        "push": 17,
+        "merge_request": 17,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 56,
+      "gitlabByType": {
+        "push": 28,
+        "merge_request": 18,
+        "autre": 8,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 45,
+      "gitlabByType": {
+        "autre": 7,
+        "push": 21,
+        "merge_request": 15,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 4,
+      "gitlabByType": {
+        "push": 2,
+        "merge_request": 1,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 10,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 4,
+        "commentaire": 1,
+        "autre": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "issue": 1,
+        "autre": 2,
+        "push": 3,
+        "merge_request": 2,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 7,
+      "gitlabByType": {
+        "autre": 2,
+        "commentaire": 1,
+        "merge_request": 3,
+        "issue": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 31,
+      "gitlabByType": {
+        "push": 11,
+        "merge_request": 7,
+        "autre": 11,
+        "commentaire": 1,
+        "issue": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 10,
+      "gitlabByType": {
+        "merge_request": 1,
+        "push": 2,
+        "commentaire": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "push": 2,
+        "autre": 2,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "push": 12,
+        "autre": 1,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 32,
+      "gitlabByType": {
+        "autre": 5,
+        "merge_request": 10,
+        "push": 16,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 10,
+      "gitlabByType": {
+        "push": 6,
+        "merge_request": 3,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 19,
+      "gitlabByType": {
+        "autre": 9,
+        "merge_request": 5,
+        "push": 4,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 10,
+      "gitlabByType": {
+        "merge_request": 4,
+        "autre": 1,
+        "push": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 59,
+      "gitlabByType": {
+        "merge_request": 17,
+        "push": 25,
+        "autre": 7,
+        "commentaire": 10
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "merge_request": 5,
+        "autre": 2,
+        "push": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 7,
+        "autre": 3,
+        "push": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 37,
+      "gitlabByType": {
+        "autre": 5,
+        "merge_request": 13,
+        "push": 14,
+        "commentaire": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 14,
+      "gitlabByType": {
+        "autre": 1,
+        "merge_request": 5,
+        "push": 7,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 19,
+      "gitlabByType": {
+        "autre": 5,
+        "merge_request": 6,
+        "push": 7,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 14,
+      "gitlabByType": {
+        "push": 11,
+        "merge_request": 2,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 36,
+      "gitlabByType": {
+        "push": 14,
+        "merge_request": 4,
+        "commentaire": 18
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 43,
+      "gitlabByType": {
+        "push": 10,
+        "merge_request": 2,
+        "commentaire": 31
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 31,
+      "gitlabByType": {
+        "autre": 4,
+        "merge_request": 9,
+        "push": 17,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 25,
+      "gitlabByType": {
+        "push": 9,
+        "autre": 4,
+        "merge_request": 8,
+        "commentaire": 3,
+        "issue": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 33,
+      "gitlabByType": {
+        "autre": 2,
+        "merge_request": 9,
+        "push": 9,
+        "commentaire": 13
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 33,
+      "gitlabByType": {
+        "merge_request": 15,
+        "push": 15,
+        "autre": 2,
+        "issue": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 51,
+      "gitlabByType": {
+        "merge_request": 16,
+        "push": 21,
+        "commentaire": 2,
+        "autre": 12
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 34,
+      "gitlabByType": {
+        "autre": 9,
+        "merge_request": 12,
+        "push": 12,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 41,
+      "gitlabByType": {
+        "merge_request": 18,
+        "push": 15,
+        "autre": 7,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 15,
+      "gitlabByType": {
+        "merge_request": 5,
+        "push": 5,
+        "issue": 2,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 2,
+      "gitlabByType": {
+        "merge_request": 1,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 59,
+      "gitlabByType": {
+        "push": 29,
+        "merge_request": 23,
+        "autre": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 35,
+      "gitlabByType": {
+        "commentaire": 10,
+        "merge_request": 9,
+        "push": 13,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 8,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 4,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 8,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 31,
+      "gitlabByType": {
+        "merge_request": 12,
+        "push": 12,
+        "autre": 4,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 5,
+      "gitlab": 50,
+      "gitlabByType": {
+        "push": 11,
+        "autre": 15,
+        "commentaire": 13,
+        "merge_request": 11
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 47,
+      "gitlabByType": {
+        "merge_request": 12,
+        "autre": 8,
+        "push": 21,
+        "commentaire": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 7,
+      "gitlabByType": {
+        "push": 2,
+        "autre": 3,
+        "issue": 1,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 22,
+      "gitlabByType": {
+        "autre": 2,
+        "push": 13,
+        "merge_request": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 36,
+      "gitlabByType": {
+        "commentaire": 6,
+        "merge_request": 14,
+        "autre": 7,
+        "push": 9
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 28,
+      "gitlabByType": {
+        "merge_request": 7,
+        "push": 8,
+        "autre": 4,
+        "commentaire": 9
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 26,
+      "gitlabByType": {
+        "autre": 4,
+        "merge_request": 4,
+        "push": 5,
+        "commentaire": 11,
+        "issue": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 14,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 7,
+        "autre": 1,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 13,
+      "gitlabByType": {
+        "merge_request": 5,
+        "push": 4,
+        "autre": 2,
+        "issue": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 43,
+      "gitlabByType": {
+        "autre": 5,
+        "merge_request": 8,
+        "push": 16,
+        "commentaire": 14
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 14,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 6,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 24,
+      "gitlabByType": {
+        "autre": 3,
+        "merge_request": 5,
+        "push": 5,
+        "commentaire": 11
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 12,
+      "gitlabByType": {
+        "merge_request": 3,
+        "autre": 2,
+        "push": 4,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 12,
+      "gitlabByType": {
+        "push": 5,
+        "merge_request": 3,
+        "autre": 2,
+        "issue": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 45,
+      "gitlabByType": {
+        "merge_request": 8,
+        "push": 10,
+        "commentaire": 26,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 30,
+      "gitlabByType": {
+        "merge_request": 12,
+        "autre": 7,
+        "push": 10,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 13,
+      "gitlabByType": {
+        "issue": 1,
+        "push": 6,
+        "merge_request": 3,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 3,
+      "gitlabByType": {
+        "merge_request": 1,
+        "push": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 64,
+      "gitlabByType": {
+        "merge_request": 24,
+        "push": 27,
+        "autre": 8,
+        "commentaire": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 83,
+      "gitlabByType": {
+        "push": 41,
+        "autre": 14,
+        "merge_request": 28
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 36,
+      "gitlabByType": {
+        "push": 17,
+        "commentaire": 4,
+        "merge_request": 8,
+        "autre": 5,
+        "issue": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 18,
+      "gitlabByType": {
+        "autre": 7,
+        "merge_request": 5,
+        "push": 5,
+        "issue": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 45,
+      "gitlabByType": {
+        "autre": 9,
+        "merge_request": 17,
+        "push": 19
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 74,
+      "gitlabByType": {
+        "merge_request": 26,
+        "autre": 10,
+        "push": 37,
+        "issue": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 58,
+      "gitlabByType": {
+        "push": 33,
+        "autre": 9,
+        "merge_request": 16
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 14,
+      "gitlabByType": {
+        "push": 7,
+        "autre": 3,
+        "merge_request": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 6,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 56,
+      "gitlabByType": {
+        "merge_request": 21,
+        "push": 26,
+        "autre": 7,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 87,
+      "gitlabByType": {
+        "merge_request": 11,
+        "commentaire": 59,
+        "push": 12,
+        "autre": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 27,
+      "gitlabByType": {
+        "merge_request": 9,
+        "push": 13,
+        "autre": 4,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 40,
+      "gitlabByType": {
+        "merge_request": 14,
+        "push": 21,
+        "autre": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 25,
+      "gitlabByType": {
+        "merge_request": 9,
+        "push": 9,
+        "autre": 6,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "push": 8,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 24,
+      "gitlabByType": {
+        "commentaire": 6,
+        "merge_request": 9,
+        "push": 6,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 39,
+      "gitlabByType": {
+        "push": 17,
+        "autre": 5,
+        "merge_request": 13,
+        "commentaire": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 27,
+      "gitlabByType": {
+        "push": 15,
+        "merge_request": 8,
+        "autre": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 32,
+      "gitlabByType": {
+        "merge_request": 10,
+        "push": 16,
+        "commentaire": 2,
+        "autre": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 54,
+      "gitlabByType": {
+        "autre": 9,
+        "push": 20,
+        "merge_request": 22,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 8,
+      "gitlabByType": {
+        "commentaire": 7,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 31,
+      "gitlabByType": {
+        "merge_request": 12,
+        "autre": 9,
+        "push": 9,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 15,
+      "gitlabByType": {
+        "merge_request": 7,
+        "push": 6,
+        "autre": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 41,
+      "gitlabByType": {
+        "merge_request": 15,
+        "autre": 6,
+        "push": 11,
+        "commentaire": 9
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 2,
+      "gitlabByType": {
+        "merge_request": 1,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "push": 5,
+        "autre": 1,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 28,
+      "gitlabByType": {
+        "autre": 5,
+        "push": 14,
+        "merge_request": 9
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 8,
+        "autre": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 29,
+      "gitlabByType": {
+        "push": 13,
+        "autre": 5,
+        "merge_request": 11
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 10,
+      "gitlabByType": {
+        "commentaire": 2,
+        "push": 5,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 33,
+      "gitlabByType": {
+        "merge_request": 7,
+        "push": 14,
+        "commentaire": 8,
+        "autre": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 25,
+      "gitlabByType": {
+        "push": 11,
+        "commentaire": 11,
+        "autre": 1,
+        "merge_request": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 57,
+      "gitlabByType": {
+        "merge_request": 11,
+        "commentaire": 31,
+        "autre": 5,
+        "push": 10
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 25,
+      "gitlabByType": {
+        "commentaire": 5,
+        "push": 10,
+        "merge_request": 7,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 13,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 4,
+        "autre": 2,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 17,
+      "gitlabByType": {
+        "push": 8,
+        "autre": 3,
+        "merge_request": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 22,
+      "gitlabByType": {
+        "merge_request": 5,
+        "push": 6,
+        "autre": 1,
+        "commentaire": 10
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 23,
+      "gitlabByType": {
+        "commentaire": 2,
+        "push": 11,
+        "merge_request": 7,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 8,
+      "gitlabByType": {
+        "merge_request": 2,
+        "commentaire": 2,
+        "push": 3,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 32,
+      "gitlabByType": {
+        "push": 17,
+        "merge_request": 9,
+        "autre": 4,
+        "commentaire": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "push": 6,
+        "merge_request": 5,
+        "autre": 2,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 23,
+      "gitlabByType": {
+        "push": 13,
+        "merge_request": 8,
+        "autre": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 20,
+      "gitlabByType": {
+        "commentaire": 5,
+        "merge_request": 6,
+        "autre": 3,
+        "push": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 53,
+      "gitlabByType": {
+        "merge_request": 9,
+        "push": 9,
+        "commentaire": 28,
+        "autre": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 28,
+      "gitlabByType": {
+        "push": 9,
+        "autre": 4,
+        "merge_request": 7,
+        "commentaire": 8
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 29,
+      "gitlabByType": {
+        "commentaire": 5,
+        "merge_request": 8,
+        "push": 13,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 6,
+      "gitlabByType": {
+        "merge_request": 3,
+        "commentaire": 1,
+        "autre": 1,
+        "push": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 22,
+      "gitlabByType": {
+        "push": 8,
+        "autre": 3,
+        "merge_request": 10,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 20,
+      "gitlabByType": {
+        "push": 8,
+        "merge_request": 4,
+        "commentaire": 5,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 1,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 29,
+      "gitlabByType": {
+        "merge_request": 13,
+        "push": 12,
+        "commentaire": 1,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 33,
+      "gitlabByType": {
+        "push": 20,
+        "merge_request": 6,
+        "commentaire": 1,
+        "autre": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 22,
+      "gitlabByType": {
+        "autre": 5,
+        "merge_request": 6,
+        "push": 10,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 25,
+      "gitlabByType": {
+        "commentaire": 14,
+        "autre": 5,
+        "push": 3,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "autre": 2,
+        "merge_request": 1,
+        "push": 2,
+        "commentaire": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 20,
+      "gitlabByType": {
+        "commentaire": 6,
+        "autre": 4,
+        "merge_request": 6,
+        "push": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 28,
+      "gitlabByType": {
+        "merge_request": 9,
+        "push": 12,
+        "autre": 3,
+        "commentaire": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 3,
+      "gitlabByType": {
+        "autre": 1,
+        "push": 1,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 66,
+      "gitlabByType": {
+        "push": 13,
+        "autre": 5,
+        "merge_request": 10,
+        "commentaire": 38
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 30,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 11,
+        "autre": 1,
+        "commentaire": 12
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 27,
+      "gitlabByType": {
+        "push": 4,
+        "merge_request": 6,
+        "commentaire": 16,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 24,
+      "gitlabByType": {
+        "merge_request": 7,
+        "push": 3,
+        "commentaire": 11,
+        "autre": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 12,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 65,
+      "gitlabByType": {
+        "merge_request": 18,
+        "push": 34,
+        "autre": 13
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 37,
+      "gitlabByType": {
+        "push": 11,
+        "merge_request": 10,
+        "commentaire": 3,
+        "autre": 13
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 43,
+      "gitlabByType": {
+        "merge_request": 13,
+        "push": 19,
+        "autre": 5,
+        "commentaire": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 27,
+      "gitlabByType": {
+        "merge_request": 9,
+        "push": 14,
+        "autre": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 57,
+      "gitlabByType": {
+        "commentaire": 18,
+        "merge_request": 15,
+        "push": 18,
+        "autre": 6
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 9,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 4,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 15,
+      "gitlabByType": {
+        "commentaire": 5,
+        "push": 6,
+        "merge_request": 3,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 12,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 9,
+        "autre": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 17,
+      "gitlabByType": {
+        "push": 13,
+        "autre": 2,
+        "merge_request": 2
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 6,
+      "gitlabByType": {
+        "push": 4,
+        "autre": 1,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "push": 3,
+        "autre": 1,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 38,
+      "gitlabByType": {
+        "push": 20,
+        "merge_request": 10,
+        "autre": 8
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 51,
+      "gitlabByType": {
+        "push": 30,
+        "commentaire": 6,
+        "autre": 2,
+        "merge_request": 13
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 43,
+      "gitlabByType": {
+        "push": 19,
+        "autre": 12,
+        "commentaire": 2,
+        "merge_request": 10
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 26,
+      "gitlabByType": {
+        "autre": 4,
+        "push": 12,
+        "merge_request": 10
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 26,
+      "gitlabByType": {
+        "merge_request": 8,
+        "push": 11,
+        "commentaire": 7
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 25,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 11,
+        "autre": 3,
+        "commentaire": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 26,
+      "gitlabByType": {
+        "merge_request": 9,
+        "push": 9,
+        "autre": 4,
+        "commentaire": 4
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 3,
+      "gitlabByType": {
+        "push": 2,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 11,
+      "gitlabByType": {
+        "merge_request": 3,
+        "push": 4,
+        "autre": 1,
+        "commentaire": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 3,
+      "gitlabByType": {
+        "autre": 1,
+        "push": 1,
+        "merge_request": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 10,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 6
+      }
+    }
+  ],
+  "updated": "19 sept. 2026",
+  "source": "GitHub + GitLab"
+}
