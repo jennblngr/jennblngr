@@ -2618,11 +2618,12 @@
     },
     "2026-09-21": {
       "github": 0,
-      "gitlab": 13,
+      "gitlab": 29,
       "gitlabByType": {
-        "autre": 4,
-        "push": 6,
-        "merge_request": 3
+        "push": 12,
+        "autre": 5,
+        "merge_request": 7,
+        "commentaire": 5
       }
     }
   }
