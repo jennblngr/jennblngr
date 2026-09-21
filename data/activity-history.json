@@ -2612,6 +2612,18 @@
         "merge_request": 4,
         "push": 6
       }
+    },
+    "2026-09-20": {
+      "github": 0
+    },
+    "2026-09-21": {
+      "github": 0,
+      "gitlab": 13,
+      "gitlabByType": {
+        "autre": 4,
+        "push": 6,
+        "merge_request": 3
+      }
     }
   }
 }
