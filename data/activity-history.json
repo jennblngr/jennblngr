@@ -2625,6 +2625,15 @@
         "merge_request": 7,
         "commentaire": 5
       }
+    },
+    "2026-09-22": {
+      "github": 0,
+      "gitlab": 27,
+      "gitlabByType": {
+        "push": 13,
+        "merge_request": 10,
+        "autre": 4
+      }
     }
   }
 }
