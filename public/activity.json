@@ -134,7 +134,7 @@
     0,
     0,
     0,
-    9,
+    8,
     38,
     11,
     4,
@@ -368,7 +368,8 @@
     29,
     55,
     40,
-    4
+    18,
+    46
   ],
   "details": [
     {
@@ -1294,9 +1295,9 @@
     },
     {
       "github": 0,
-      "gitlab": 9,
+      "gitlab": 8,
       "gitlabByType": {
-        "merge_request": 4,
+        "merge_request": 3,
         "push": 3,
         "commentaire": 1,
         "autre": 1
@@ -3064,14 +3065,26 @@
     },
     {
       "github": 0,
-      "gitlab": 4,
+      "gitlab": 18,
       "gitlabByType": {
-        "push": 1,
-        "autre": 1,
-        "merge_request": 2
+        "push": 9,
+        "commentaire": 2,
+        "autre": 3,
+        "issue": 1,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 46,
+      "gitlabByType": {
+        "push": 25,
+        "autre": 8,
+        "merge_request": 12,
+        "commentaire": 1
       }
     }
   ],
-  "updated": "24 sept. 2026",
+  "updated": "25 sept. 2026",
   "source": "GitHub + GitLab"
 }
