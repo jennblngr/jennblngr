@@ -1,13 +1,6 @@
 {
-  "start": "2025-09-22",
+  "start": "2025-09-29",
   "counts": [
-    5,
-    12,
-    10,
-    0,
-    7,
-    3,
-    0,
     0,
     0,
     0,
@@ -368,57 +361,12 @@
     29,
     55,
     40,
-    18,
-    46
+    19,
+    57,
+    16,
+    0
   ],
   "details": [
-    {
-      "github": 0,
-      "gitlab": 5,
-      "gitlabByType": {
-        "push": 3,
-        "issue": 2
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 12,
-      "gitlabByType": {
-        "push": 6,
-        "merge_request": 4,
-        "autre": 1,
-        "commentaire": 1
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 10,
-      "gitlabByType": {
-        "commentaire": 2,
-        "push": 8
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 0
-    },
-    {
-      "github": 0,
-      "gitlab": 7,
-      "gitlabByType": {
-        "push": 4,
-        "autre": 2,
-        "merge_request": 1
-      }
-    },
-    {
-      "github": 3,
-      "gitlab": 0
-    },
-    {
-      "github": 0,
-      "gitlab": 0
-    },
     {
       "github": 0,
       "gitlab": 0
@@ -3064,7 +3012,7 @@
       }
     },
     {
-      "github": 0,
+      "github": 1,
       "gitlab": 18,
       "gitlabByType": {
         "push": 9,
@@ -3075,7 +3023,7 @@
       }
     },
     {
-      "github": 0,
+      "github": 11,
       "gitlab": 46,
       "gitlabByType": {
         "push": 25,
@@ -3083,8 +3031,22 @@
         "merge_request": 12,
         "commentaire": 1
       }
+    },
+    {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 10,
+        "autre": 1,
+        "commentaire": 1
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 0
     }
   ],
-  "updated": "25 sept. 2026",
+  "updated": "27 sept. 2026",
   "source": "GitHub + GitLab"
 }

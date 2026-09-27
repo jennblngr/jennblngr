@@ -2646,7 +2646,7 @@
       }
     },
     "2026-09-24": {
-      "github": 0,
+      "github": 1,
       "gitlab": 18,
       "gitlabByType": {
         "push": 9,
@@ -2657,7 +2657,7 @@
       }
     },
     "2026-09-25": {
-      "github": 0,
+      "github": 11,
       "gitlab": 46,
       "gitlabByType": {
         "push": 25,
@@ -2665,6 +2665,19 @@
         "merge_request": 12,
         "commentaire": 1
       }
+    },
+    "2026-09-26": {
+      "github": 0,
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 10,
+        "autre": 1,
+        "commentaire": 1
+      }
+    },
+    "2026-09-27": {
+      "github": 0
     }
   }
 }
