@@ -364,7 +364,8 @@
     19,
     57,
     16,
-    0
+    0,
+    5
   ],
   "details": [
     {
@@ -3045,8 +3046,17 @@
     {
       "github": 0,
       "gitlab": 0
+    },
+    {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 2,
+        "autre": 1
+      }
     }
   ],
-  "updated": "27 sept. 2026",
+  "updated": "28 sept. 2026",
   "source": "GitHub + GitLab"
 }

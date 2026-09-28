@@ -2678,6 +2678,15 @@
     },
     "2026-09-27": {
       "github": 0
+    },
+    "2026-09-28": {
+      "github": 0,
+      "gitlab": 5,
+      "gitlabByType": {
+        "merge_request": 2,
+        "push": 2,
+        "autre": 1
+      }
     }
   }
 }
