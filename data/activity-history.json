@@ -2688,6 +2688,16 @@
         "autre": 4,
         "commentaire": 1
       }
+    },
+    "2026-09-29": {
+      "github": 0,
+      "gitlab": 29,
+      "gitlabByType": {
+        "autre": 6,
+        "push": 13,
+        "merge_request": 9,
+        "commentaire": 1
+      }
     }
   }
 }
