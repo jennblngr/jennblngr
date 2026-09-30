@@ -2701,12 +2701,12 @@
     },
     "2026-09-30": {
       "github": 0,
-      "gitlab": 22,
+      "gitlab": 43,
       "gitlabByType": {
-        "push": 13,
-        "autre": 3,
-        "merge_request": 5,
-        "commentaire": 1
+        "push": 25,
+        "commentaire": 4,
+        "merge_request": 9,
+        "autre": 5
       }
     }
   }
