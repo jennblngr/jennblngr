@@ -366,7 +366,8 @@
     16,
     0,
     31,
-    29
+    45,
+    22
   ],
   "details": [
     {
@@ -3059,16 +3060,26 @@
       }
     },
     {
-      "github": 0,
-      "gitlab": 29,
+      "github": 1,
+      "gitlab": 44,
       "gitlabByType": {
-        "autre": 6,
+        "push": 19,
+        "merge_request": 13,
+        "autre": 7,
+        "commentaire": 5
+      }
+    },
+    {
+      "github": 0,
+      "gitlab": 22,
+      "gitlabByType": {
         "push": 13,
-        "merge_request": 9,
+        "autre": 3,
+        "merge_request": 5,
         "commentaire": 1
       }
     }
   ],
-  "updated": "29 sept. 2026",
+  "updated": "30 sept. 2026",
   "source": "GitHub + GitLab"
 }
