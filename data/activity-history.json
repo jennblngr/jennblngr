@@ -2711,11 +2711,11 @@
     },
     "2026-10-01": {
       "github": 0,
-      "gitlab": 18,
+      "gitlab": 33,
       "gitlabByType": {
-        "merge_request": 5,
-        "push": 9,
-        "autre": 4
+        "push": 17,
+        "merge_request": 8,
+        "autre": 8
       }
     }
   }
