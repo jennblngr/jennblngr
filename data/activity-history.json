@@ -2708,6 +2708,15 @@
         "merge_request": 9,
         "autre": 5
       }
+    },
+    "2026-10-01": {
+      "github": 0,
+      "gitlab": 18,
+      "gitlabByType": {
+        "merge_request": 5,
+        "push": 9,
+        "autre": 4
+      }
     }
   }
 }
