@@ -363,8 +363,9 @@
     43,
     34,
     18,
-    19,
-    5
+    20,
+    18,
+    11
   ],
   "details": [
     {
@@ -3068,7 +3069,7 @@
       }
     },
     {
-      "github": 0,
+      "github": 1,
       "gitlab": 19,
       "gitlabByType": {
         "merge_request": 13,
@@ -3076,14 +3077,24 @@
       }
     },
     {
-      "github": 0,
-      "gitlab": 5,
+      "github": 3,
+      "gitlab": 15,
+      "gitlabByType": {
+        "push": 12,
+        "merge_request": 3
+      }
+    },
+    {
+      "github": 2,
+      "gitlab": 9,
       "gitlabByType": {
         "merge_request": 2,
-        "push": 3
+        "commentaire": 1,
+        "autre": 2,
+        "push": 4
       }
     }
   ],
-  "updated": "04 oct. 2026",
+  "updated": "05 oct. 2026",
   "source": "GitHub + GitLab"
 }
