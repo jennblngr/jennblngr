@@ -2745,13 +2745,22 @@
       }
     },
     "2026-10-05": {
-      "github": 2,
+      "github": 17,
       "gitlab": 9,
       "gitlabByType": {
         "merge_request": 2,
         "commentaire": 1,
         "autre": 2,
         "push": 4
+      }
+    },
+    "2026-10-06": {
+      "github": 0,
+      "gitlab": 33,
+      "gitlabByType": {
+        "merge_request": 11,
+        "push": 19,
+        "autre": 3
       }
     }
   }
