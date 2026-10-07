@@ -367,7 +367,7 @@
     18,
     26,
     33,
-    3
+    17
   ],
   "details": [
     {
@@ -3107,10 +3107,10 @@
     },
     {
       "github": 0,
-      "gitlab": 3,
+      "gitlab": 17,
       "gitlabByType": {
-        "push": 2,
-        "merge_request": 1
+        "merge_request": 8,
+        "push": 9
       }
     }
   ],
