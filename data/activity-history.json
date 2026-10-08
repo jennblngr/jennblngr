@@ -2765,10 +2765,19 @@
     },
     "2026-10-07": {
       "github": 0,
-      "gitlab": 17,
+      "gitlab": 23,
       "gitlabByType": {
-        "merge_request": 8,
-        "push": 9
+        "merge_request": 10,
+        "push": 13
+      }
+    },
+    "2026-10-08": {
+      "github": 0,
+      "gitlab": 40,
+      "gitlabByType": {
+        "autre": 8,
+        "push": 20,
+        "merge_request": 12
       }
     }
   }
