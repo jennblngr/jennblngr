@@ -368,7 +368,7 @@
     26,
     33,
     23,
-    40
+    72
   ],
   "details": [
     {
@@ -3116,11 +3116,11 @@
     },
     {
       "github": 0,
-      "gitlab": 40,
+      "gitlab": 72,
       "gitlabByType": {
-        "autre": 8,
-        "push": 20,
-        "merge_request": 12
+        "push": 40,
+        "autre": 13,
+        "merge_request": 19
       }
     }
   ],
