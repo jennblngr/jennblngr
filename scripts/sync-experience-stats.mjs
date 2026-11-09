@@ -5,10 +5,12 @@
 // attendu par ExperienceSection.vue.
 //
 // Mêmes identifiants que scripts/sync-activity.mjs (voir .env.example) : GITLAB_URL,
-// GITLAB_USERNAME, GITLAB_TOKEN. Si l'accès GitLab échoue, le script s'arrête sans
-// toucher aux fichiers déjà persistés — les stats affichées restent celles de la
-// dernière synchronisation réussie (ou, en dernier recours, les valeurs de repli
-// codées en dur dans src/data/portfolio.ts).
+// GITLAB_USERNAME, GITLAB_TOKEN. Si l'accès GitLab échoue (variables absentes, token
+// expiré/révoqué…), le script s'arrête sans toucher aux fichiers déjà persistés — les
+// stats affichées restent celles de la dernière synchronisation réussie (ou, en dernier
+// recours, les valeurs de repli codées en dur dans src/data/portfolio.ts). Il se termine
+// alors avec le code 0, comme sync-activity.mjs, pour ne pas bloquer une chaîne
+// `sync-activity && sync-experience-stats && git commit` le jour où l'accès est perdu.
 //
 // "issues fermées" = nombre d'issues actuellement à l'état "closed" sur lesquelles
 // je suis assignée (peu importe qui les a fermées) — pas le nombre de fois où j'ai
@@ -145,9 +147,7 @@ async function fetchMergeRequestStats({ baseUrl, headers, userId, since, until }
 }
 // #endregion
 
-async function main() {
-  loadDotEnv()
-
+async function collectSnapshot() {
   const baseUrl = requireEnv('GITLAB_URL')
   const token = requireEnv('GITLAB_TOKEN')
   const username = requireEnv('GITLAB_USERNAME')
@@ -175,6 +175,22 @@ async function main() {
     console.log(
       `  ${org} : ${issuesClosed} issues fermées, ${mrComments} commentaires en MR, ${mrReviewed} MR relues.`,
     )
+  }
+  return snapshot
+}
+
+async function main() {
+  loadDotEnv()
+
+  let snapshot
+  try {
+    snapshot = await collectSnapshot()
+  } catch (err) {
+    const detail = err.cause?.message ?? err.message
+    console.warn(
+      `GitLab ignoré (${detail}). Les stats d'expérience déjà persistées sont conservées telles quelles.`,
+    )
+    return
   }
 
   await writeJson('data/experience-stats.json', snapshot)
