@@ -1,4 +1,4 @@
-// Helpers partagés par les scripts de synchronisation (scripts/sync-*.mjs).
+// Helpers utilisés par scripts/sync-activity.mjs.
 
 import { existsSync, readFileSync } from 'node:fs'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
@@ -63,13 +63,4 @@ export async function readJson(path, fallback) {
 export async function writeJson(path, data) {
   await mkdir(dirname(path), { recursive: true })
   await writeFile(path, `${JSON.stringify(data, null, 2)}\n`)
-}
-
-export function parseNextLink(linkHeader) {
-  if (!linkHeader) return null
-  for (const part of linkHeader.split(',')) {
-    const [urlPart, relPart] = part.split(';').map((s) => s.trim())
-    if (relPart === 'rel="next"') return urlPart.slice(1, -1)
-  }
-  return null
 }

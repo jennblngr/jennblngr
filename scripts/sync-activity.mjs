@@ -4,8 +4,8 @@
 // dist/activity.json si présent) au format attendu par ActivitySection.vue, en additionnant
 // l'activité GitLab déjà présente dans data/gitlab-activity.json.
 //
-// data/gitlab-activity.json n'est jamais écrit ici : il est alimenté par le pipeline GitLab
-// "portfolio-activity-sync" (voir scripts/sync-gitlab-activity.mjs). S'il n'est plus mis à
+// data/gitlab-activity.json n'est jamais écrit ici : il est alimenté par le projet GitLab
+// d'entreprise "portfolio-activity-sync" (script sync-gitlab-activity.mjs). S'il n'est plus mis à
 // jour, les jours GitLab déjà persistés restent figés et le graphe continue avec GitHub.
 //
 // Lancé par .github/workflows/deploy.yml avant chaque build (push sur main + cron quotidien).
