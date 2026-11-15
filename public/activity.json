@@ -326,45 +326,45 @@
     28,
     33,
     23,
-    72,
+    85,
     3,
     8,
     2,
-    20,
-    16,
-    29,
-    2,
-    10,
+    90,
+    32,
+    82,
+    35,
+    31,
     4,
     8,
-    0,
-    6,
-    0,
-    0,
-    1,
+    23,
+    19,
+    29,
+    27,
+    7,
     12,
     28,
-    5,
-    0,
-    5,
-    4,
-    9,
-    0,
-    45,
-    4,
-    17,
-    0,
-    3,
-    8,
-    4,
-    32,
-    17,
-    2,
+    22,
     6,
-    2,
-    2,
+    26,
+    20,
+    24,
     0,
-    0
+    53,
+    17,
+    39,
+    0,
+    24,
+    52,
+    38,
+    64,
+    137,
+    119,
+    108,
+    43,
+    111,
+    0,
+    9
   ],
   "details": [
     {
@@ -2828,11 +2828,11 @@
     },
     {
       "github": 0,
-      "gitlab": 72,
+      "gitlab": 85,
       "gitlabByType": {
-        "push": 40,
-        "autre": 13,
-        "merge_request": 19
+        "push": 51,
+        "merge_request": 21,
+        "autre": 13
       }
     },
     {
@@ -2849,23 +2849,51 @@
     },
     {
       "github": 20,
-      "gitlab": 0
+      "gitlab": 70,
+      "gitlabByType": {
+        "push": 37,
+        "merge_request": 20,
+        "autre": 13
+      }
     },
     {
       "github": 16,
-      "gitlab": 0
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 10,
+        "push": 5,
+        "autre": 1
+      }
     },
     {
       "github": 29,
-      "gitlab": 0
+      "gitlab": 53,
+      "gitlabByType": {
+        "merge_request": 23,
+        "autre": 9,
+        "push": 20,
+        "commentaire": 1
+      }
     },
     {
       "github": 2,
-      "gitlab": 0
+      "gitlab": 33,
+      "gitlabByType": {
+        "commentaire": 1,
+        "autre": 6,
+        "merge_request": 14,
+        "push": 12
+      }
     },
     {
       "github": 10,
-      "gitlab": 0
+      "gitlab": 21,
+      "gitlabByType": {
+        "merge_request": 6,
+        "autre": 4,
+        "commentaire": 3,
+        "push": 8
+      }
     },
     {
       "github": 4,
@@ -2877,23 +2905,50 @@
     },
     {
       "github": 0,
-      "gitlab": 0
+      "gitlab": 23,
+      "gitlabByType": {
+        "merge_request": 9,
+        "autre": 3,
+        "push": 11
+      }
     },
     {
       "github": 6,
-      "gitlab": 0
+      "gitlab": 13,
+      "gitlabByType": {
+        "autre": 2,
+        "push": 5,
+        "merge_request": 5,
+        "commentaire": 1
+      }
     },
     {
       "github": 0,
-      "gitlab": 0
+      "gitlab": 29,
+      "gitlabByType": {
+        "push": 13,
+        "autre": 3,
+        "merge_request": 7,
+        "commentaire": 6
+      }
     },
     {
       "github": 0,
-      "gitlab": 0
+      "gitlab": 27,
+      "gitlabByType": {
+        "merge_request": 8,
+        "push": 15,
+        "autre": 4
+      }
     },
     {
       "github": 1,
-      "gitlab": 0
+      "gitlab": 6,
+      "gitlabByType": {
+        "push": 2,
+        "autre": 1,
+        "merge_request": 3
+      }
     },
     {
       "github": 12,
@@ -2905,23 +2960,52 @@
     },
     {
       "github": 5,
-      "gitlab": 0
+      "gitlab": 17,
+      "gitlabByType": {
+        "push": 9,
+        "merge_request": 5,
+        "commentaire": 1,
+        "autre": 2
+      }
     },
     {
       "github": 0,
-      "gitlab": 0
+      "gitlab": 6,
+      "gitlabByType": {
+        "push": 4,
+        "commentaire": 1,
+        "merge_request": 1
+      }
     },
     {
       "github": 5,
-      "gitlab": 0
+      "gitlab": 21,
+      "gitlabByType": {
+        "push": 8,
+        "autre": 4,
+        "merge_request": 7,
+        "commentaire": 2
+      }
     },
     {
       "github": 4,
-      "gitlab": 0
+      "gitlab": 16,
+      "gitlabByType": {
+        "merge_request": 6,
+        "push": 6,
+        "commentaire": 3,
+        "autre": 1
+      }
     },
     {
       "github": 9,
-      "gitlab": 0
+      "gitlab": 15,
+      "gitlabByType": {
+        "commentaire": 1,
+        "autre": 2,
+        "push": 7,
+        "merge_request": 5
+      }
     },
     {
       "github": 0,
@@ -2929,15 +3013,31 @@
     },
     {
       "github": 45,
-      "gitlab": 0
+      "gitlab": 8,
+      "gitlabByType": {
+        "push": 4,
+        "merge_request": 3,
+        "commentaire": 1
+      }
     },
     {
       "github": 4,
-      "gitlab": 0
+      "gitlab": 13,
+      "gitlabByType": {
+        "push": 5,
+        "merge_request": 5,
+        "autre": 3
+      }
     },
     {
       "github": 17,
-      "gitlab": 0
+      "gitlab": 22,
+      "gitlabByType": {
+        "push": 10,
+        "merge_request": 7,
+        "autre": 2,
+        "commentaire": 3
+      }
     },
     {
       "github": 0,
@@ -2945,39 +3045,88 @@
     },
     {
       "github": 3,
-      "gitlab": 0
+      "gitlab": 21,
+      "gitlabByType": {
+        "merge_request": 8,
+        "push": 8,
+        "autre": 3,
+        "commentaire": 2
+      }
     },
     {
       "github": 8,
-      "gitlab": 0
+      "gitlab": 44,
+      "gitlabByType": {
+        "merge_request": 11,
+        "push": 26,
+        "autre": 4,
+        "commentaire": 3
+      }
     },
     {
       "github": 4,
-      "gitlab": 0
+      "gitlab": 34,
+      "gitlabByType": {
+        "push": 22,
+        "merge_request": 12
+      }
     },
     {
       "github": 32,
-      "gitlab": 0
+      "gitlab": 32,
+      "gitlabByType": {
+        "merge_request": 11,
+        "push": 20,
+        "autre": 1
+      }
     },
     {
       "github": 17,
-      "gitlab": 0
+      "gitlab": 120,
+      "gitlabByType": {
+        "push": 69,
+        "merge_request": 31,
+        "commentaire": 4,
+        "autre": 16
+      }
     },
     {
       "github": 2,
-      "gitlab": 0
+      "gitlab": 117,
+      "gitlabByType": {
+        "push": 70,
+        "autre": 15,
+        "merge_request": 29,
+        "commentaire": 3
+      }
     },
     {
       "github": 6,
-      "gitlab": 0
+      "gitlab": 102,
+      "gitlabByType": {
+        "merge_request": 18,
+        "push": 73,
+        "autre": 11
+      }
     },
     {
       "github": 2,
-      "gitlab": 0
+      "gitlab": 41,
+      "gitlabByType": {
+        "merge_request": 7,
+        "push": 10,
+        "commentaire": 24
+      }
     },
     {
       "github": 2,
-      "gitlab": 0
+      "gitlab": 109,
+      "gitlabByType": {
+        "push": 62,
+        "merge_request": 26,
+        "autre": 19,
+        "commentaire": 2
+      }
     },
     {
       "github": 0,
@@ -2985,7 +3134,12 @@
     },
     {
       "github": 0,
-      "gitlab": 0
+      "gitlab": 9,
+      "gitlabByType": {
+        "push": 5,
+        "autre": 1,
+        "merge_request": 3
+      }
     }
   ],
   "updated": "15 nov. 2026",
