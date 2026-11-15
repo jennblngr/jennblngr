@@ -1,13 +1,23 @@
 name: Deploy
 
+# Déclenché par :
+#   - tout push sur main (dont ceux du pipeline GitLab "portfolio-activity-sync", qui pousse
+#     data/gitlab-activity.json et les stats d'expérience) ;
+#   - un cron quotidien, pour que l'activité GitHub se mette à jour même sans push ;
+#   - un lancement manuel.
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 4 * * *' # 05:00/06:00 heure de Paris
   workflow_dispatch:
 
 concurrency:
   group: deploy
   cancel-in-progress: true
+
+permissions:
+  contents: write # commit des données GitHub synchronisées
 
 jobs:
   build-and-deploy:
@@ -15,12 +25,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
+
+      - name: Sync GitHub activity
+        run: node scripts/sync-activity.mjs
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GH_READ_TOKEN }}
+
+      # Le push utilise le GITHUB_TOKEN de l'Action : il ne redéclenche pas ce workflow.
+      - name: Commit synced data
+        run: |
+          if git diff --quiet -- data/github-activity.json public/activity.json; then
+            echo "Aucune nouvelle donnée GitHub"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/github-activity.json public/activity.json
+          git commit -m "chore(data): sync GitHub activity"
+          git pull --rebase origin main
+          git push origin HEAD:main
 
       - name: Install dependencies
         run: npm ci

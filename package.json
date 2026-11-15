@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "sync:activity": "node scripts/sync-activity.mjs"
+    "sync:activity": "node scripts/sync-activity.mjs",
+    "sync:gitlab": "node scripts/sync-gitlab-activity.mjs && node scripts/sync-experience-stats.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

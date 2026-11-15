@@ -4,7 +4,7 @@
 // public/experience-stats.json (et dist/experience-stats.json si présent) au format
 // attendu par ExperienceSection.vue.
 //
-// Mêmes identifiants que scripts/sync-activity.mjs (voir .env.example) : GITLAB_URL,
+// Mêmes identifiants que scripts/sync-gitlab-activity.mjs (voir .env.example) : GITLAB_URL,
 // GITLAB_USERNAME, GITLAB_TOKEN. Si l'accès GitLab échoue, le script s'arrête sans
 // toucher aux fichiers déjà persistés — les stats affichées restent celles de la
 // dernière synchronisation réussie (ou, en dernier recours, les valeurs de repli
@@ -20,7 +20,7 @@
 // notion unique de "review").
 //
 // Usage : node scripts/sync-experience-stats.mjs
-// Cron (VPS) : 0 5 * * * cd /path/to/portfolio && node scripts/sync-experience-stats.mjs >> sync.log 2>&1
+// Lancé par le pipeline planifié du projet GitLab "portfolio-activity-sync".
 
 import { existsSync, readFileSync } from 'node:fs'
 import { mkdir, writeFile } from 'node:fs/promises'
