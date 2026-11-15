@@ -12,7 +12,7 @@
 //
 // Variables d'environnement (voir .env.example) :
 //   GITHUB_USERNAME   identifiant GitHub perso
-//   GITHUB_TOKEN      PAT GitHub, scope minimal (lecture profil) — secret GH_READ_TOKEN en CI
+//   GITHUB_TOKEN      PAT GitHub, scope minimal (lecture profil) — secret CONTRIBUTIONS_READ_TOKEN en CI
 //
 // Usage : node scripts/sync-activity.mjs
 

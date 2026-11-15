@@ -38,7 +38,7 @@ jobs:
         run: node scripts/sync-activity.mjs
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GH_READ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CONTRIBUTIONS_READ_TOKEN }}
 
       # Le push utilise le GITHUB_TOKEN de l'Action : il ne redéclenche pas ce workflow.
       - name: Commit synced data
