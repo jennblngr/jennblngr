@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
 import emailjs from '@emailjs/browser'
-import SectionCard from '@/components/SectionCard.vue'
+import SectionHeading from '@/components/SectionHeading.vue'
 import AppIcon from '@/components/AppIcon.vue'
-import AppButton from '@/components/AppButton.vue'
+import AppSvgIcon from '@/components/AppSvgIcon.vue'
+import BaseButton from '@/components/BaseButton.vue'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+const LABEL_CLASS = 'text-ink2 font-mono text-label tracking-[0.1em]'
+const FIELD_CLASS =
+  'bg-field text-ink w-full border-[1.5px] font-sans text-body outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'
+const ERROR_CLASS = 'text-accent font-mono text-meta tracking-[0.06em]'
 
 // #region Data
 const form = reactive({ name: '', email: '', message: '' })
@@ -25,8 +31,8 @@ const isConfigured = computed(() => Boolean(serviceId && templateId && publicKey
 // #endregion
 
 // #region Functions
-function borderClass(hasError: string): string {
-  return hasError ? 'border-red-400' : 'border-line'
+function borderClass(error: string): string {
+  return error ? 'border-accent' : 'border-ink'
 }
 
 function validate(): boolean {
@@ -65,82 +71,89 @@ async function handleSubmit(): Promise<void> {
 </script>
 
 <template>
-  <SectionCard id="contact" label="contact">
+  <section id="contact" class="flex flex-col gap-5">
+    <SectionHeading>/contact</SectionHeading>
+
     <form
       v-if="isConfigured"
       novalidate
-      class="flex flex-col gap-[14px]"
+      class="border-ink bg-surf flex flex-col gap-[22px] border-[1.5px] p-5 sm:p-8"
       @submit.prevent="handleSubmit"
     >
-      <div class="grid grid-cols-2 gap-[14px]">
-        <label class="flex flex-col gap-[6px] text-[0.78125rem]">
-          <span class="text-dim">nom</span>
+      <div class="flex flex-wrap gap-5">
+        <div class="flex flex-[1_1_260px] flex-col gap-2">
+          <label for="contact-name" :class="LABEL_CLASS">NOM</label>
           <input
+            id="contact-name"
             v-model="form.name"
             type="text"
             autocomplete="name"
-            :class="borderClass(errors.name)"
-            class="bg-inset text-fg focus:border-accent w-full rounded-[3px] border px-[10px] py-2 text-[0.8125rem] transition-colors duration-150 outline-none"
+            :aria-invalid="Boolean(errors.name)"
+            :class="[FIELD_CLASS, borderClass(errors.name)]"
+            class="h-12 px-[14px]"
             @input="errors.name = ''"
           />
-          <span v-if="errors.name" class="text-[0.71875rem] text-red-400">{{ errors.name }}</span>
-        </label>
+          <span v-if="errors.name" :class="ERROR_CLASS">{{ errors.name }}</span>
+        </div>
 
-        <label class="flex flex-col gap-[6px] text-[0.78125rem]">
-          <span class="text-dim">email</span>
+        <div class="flex flex-[1_1_260px] flex-col gap-2">
+          <label for="contact-email" :class="LABEL_CLASS">EMAIL</label>
           <input
+            id="contact-email"
             v-model="form.email"
             type="email"
             autocomplete="email"
-            :class="borderClass(errors.email)"
-            class="bg-inset text-fg focus:border-accent w-full rounded-[3px] border px-[10px] py-2 text-[0.8125rem] transition-colors duration-150 outline-none"
+            :aria-invalid="Boolean(errors.email)"
+            :class="[FIELD_CLASS, borderClass(errors.email)]"
+            class="h-12 px-[14px]"
             @input="errors.email = ''"
           />
-          <span v-if="errors.email" class="text-[0.71875rem] text-red-400">{{ errors.email }}</span>
-        </label>
+          <span v-if="errors.email" :class="ERROR_CLASS">{{ errors.email }}</span>
+        </div>
       </div>
 
-      <label class="flex flex-col gap-[6px] text-[0.78125rem]">
-        <span class="text-dim">message</span>
+      <div class="flex flex-col gap-2">
+        <label for="contact-message" :class="LABEL_CLASS">MESSAGE</label>
         <textarea
+          id="contact-message"
           v-model="form.message"
           rows="5"
-          :class="borderClass(errors.message)"
-          class="bg-inset text-fg focus:border-accent w-full resize-none rounded-[3px] border px-[10px] py-2 text-[0.8125rem] transition-colors duration-150 outline-none"
+          :aria-invalid="Boolean(errors.message)"
+          :class="[FIELD_CLASS, borderClass(errors.message)]"
+          class="resize-y p-[14px]"
           @input="errors.message = ''"
         />
-        <span v-if="errors.message" class="text-[0.71875rem] text-red-400">{{
-          errors.message
-        }}</span>
-      </label>
+        <span v-if="errors.message" :class="ERROR_CLASS">{{ errors.message }}</span>
+      </div>
 
-      <div class="flex items-center gap-[14px]">
-        <AppButton type="submit" :disabled="isSending">
-          <AppIcon
-            :name="isSending ? 'loader' : 'send'"
-            :size="14"
-            :class="isSending && 'animate-spin'"
-          />
-          {{ isSending ? 'envoi...' : 'envoyer' }}
-        </AppButton>
+      <div class="flex flex-wrap items-center gap-4">
+        <BaseButton variant="primary" type="submit" :disabled="isSending">
+          <AppIcon v-if="isSending" name="loader" :size="14" class="animate-spin" />
+          <AppSvgIcon v-else name="send" />
+          {{ isSending ? 'Envoi…' : 'Envoyer' }}
+        </BaseButton>
 
         <span
           v-if="status === 'success'"
-          class="text-accent inline-flex items-center gap-[6px] text-[0.78125rem]"
+          role="status"
+          class="text-sage text-label inline-flex items-center gap-1.5 font-mono tracking-[0.06em]"
         >
           <AppIcon name="success" :size="14" />
-          message envoyé
+          Message envoyé, merci !
         </span>
         <span
           v-else-if="status === 'error'"
-          class="inline-flex items-center gap-[6px] text-[0.78125rem] text-red-400"
+          role="alert"
+          class="text-accent text-label inline-flex items-center gap-1.5 font-mono tracking-[0.06em]"
         >
           <AppIcon name="error" :size="14" />
-          échec de l'envoi, réessaie plus tard
+          Échec de l'envoi, réessaie plus tard.
         </span>
       </div>
     </form>
 
-    <div v-else class="text-dim text-[0.8125rem]">contact indisponible pour le moment.</div>
-  </SectionCard>
+    <div v-else class="border-ink bg-surf text-ink2 text-body border-[1.5px] p-8">
+      Contact indisponible pour le moment.
+    </div>
+  </section>
 </template>

@@ -1,0 +1,18 @@
+{
+  "updated": "17 nov. 2026",
+  "source": "GitHub",
+  "repositories": 18,
+  "privateRepositories": 13,
+  "counts": {
+    "vue.js": 4,
+    "typescript": 4,
+    "electron": 0,
+    "tailwind": 2,
+    "vite": 6,
+    "pinia": 3,
+    "vitest": 1,
+    "eslint": 4,
+    "prettier": 3,
+    "gitlab ci": 1
+  }
+}

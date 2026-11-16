@@ -20,7 +20,6 @@
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
     "@fortawesome/vue-fontawesome": "^3.3.3",
     "@lucide/vue": "^1.45.0",
-    "floating-vue": "^5.2.2",
     "pinia": "4.0.3",
     "vue": "3.5.42"
   },

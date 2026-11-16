@@ -40,16 +40,24 @@ jobs:
           GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.CONTRIBUTIONS_READ_TOKEN }}
 
+      # Nombre de dépôts par techno (section Skills). Le jeton doit pouvoir lire le contenu des
+      # dépôts (privés compris) pour que les chiffres soient complets.
+      - name: Sync GitHub skills
+        run: node scripts/sync-skills.mjs
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.CONTRIBUTIONS_READ_TOKEN }}
+
       # Le push utilise le GITHUB_TOKEN de l'Action : il ne redéclenche pas ce workflow.
       - name: Commit synced data
         run: |
-          if git diff --quiet -- data/github-activity.json public/activity.json; then
+          if git diff --quiet -- data/github-activity.json public/activity.json public/skills.json; then
             echo "Aucune nouvelle donnée GitHub"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/github-activity.json public/activity.json
+          git add data/github-activity.json public/activity.json public/skills.json
           git commit -m "chore(data): sync GitHub activity"
           git pull --rebase origin main
           git push origin HEAD:main

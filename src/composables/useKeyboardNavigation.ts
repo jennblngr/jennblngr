@@ -2,7 +2,7 @@ import { onMounted, onUnmounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 import type { SectionLink } from '@/types'
 
-const SCROLL_OFFSET = 66
+const SCROLL_OFFSET = 88
 
 export function useKeyboardNavigation(sections: readonly SectionLink[]): void {
   // #region Data

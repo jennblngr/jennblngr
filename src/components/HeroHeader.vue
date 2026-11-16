@@ -1,68 +1,67 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { BOOT_MESSAGES, SOCIAL_LINKS } from '@/data/portfolio'
-import { BOOT_LINE_DURATION_MS, STEP_MS, useBootStore } from '@/stores/boot'
-import ListRenderer from '@/components/ListRenderer.vue'
+import { CAREER_START, SOCIAL_LINKS } from '@/data/portfolio'
+import { monthsBetween } from '@/utils/dates'
 import AppIcon from '@/components/AppIcon.vue'
-import AppButton from '@/components/AppButton.vue'
+import AppSvgIcon from '@/components/AppSvgIcon.vue'
+import BaseButton from '@/components/BaseButton.vue'
+import ButtonGroup from '@/components/ButtonGroup.vue'
 
 // #region Data
-const boot = useBootStore()
-// #endregion
-
-// #region Functions
-function bootLineDelay(index: number): string {
-  return `${((index * STEP_MS) / 1000).toFixed(2)}s`
-}
-// #endregion
-
-// #region Lifecycles
-onMounted(() => {
-  const lastLineDelay = (BOOT_MESSAGES.length - 1) * STEP_MS
-  setTimeout(boot.complete, lastLineDelay + BOOT_LINE_DURATION_MS)
-})
+const years = Math.floor(monthsBetween(CAREER_START) / 12)
 // #endregion
 </script>
 
 <template>
-  <header
-    class="border-b pt-[52px] pb-[44px] transition-colors duration-300 ease-out"
-    :class="boot.isBooted ? 'border-line' : 'border-transparent'"
-  >
-    <div class="text-dim mb-[30px] flex flex-col gap-[3px] text-[0.78125rem]">
-      <ListRenderer v-slot="{ item, index }" :items="BOOT_MESSAGES">
-        <div class="animate-bootin" :style="{ animationDelay: bootLineDelay(index) }">
-          <span class="text-accent">[ok]</span> {{ item }}
-        </div>
-      </ListRenderer>
+  <section class="border-ink flex flex-wrap gap-8 border-b-[1.5px] pt-14 pb-12">
+    <div
+      class="flex flex-none flex-col items-center gap-1.5"
+      :aria-label="`${years} ans d'expérience`"
+    >
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.2"
+        aria-hidden="true"
+        class="text-accent -mt-[3px] block"
+      >
+        <path d="M6 15l6-6 6 6" />
+      </svg>
+      <span class="text-accent text-lead font-mono font-bold" aria-hidden="true">{{ years }}</span>
+      <span class="text-muted text-micro font-mono tracking-[0.08em]" aria-hidden="true">ANS</span>
     </div>
 
-    <div
-      class="transition duration-300 ease-out"
-      :class="
-        boot.isBooted
-          ? 'translate-y-0 opacity-100'
-          : 'pointer-events-none translate-y-[3px] opacity-0'
-      "
-    >
-      <div class="text-dim mb-[10px] text-[0.8125rem]">
-        <span>jennblngr@portfolio</span><span>:~$ </span><span class="text-fg">whoami</span>
-      </div>
-      <div class="text-accent mb-[2px] inline-block text-[0.84375rem] font-medium">
-        développeuse vue.js
-      </div>
-      <h1 class="m-0 mb-[6px] text-[1.875rem] font-bold tracking-[-0.01em]">
-        Jenny-Lee Boulanger<span
-          class="animate-blink bg-fg ml-2 inline-block h-[22px] w-[11px] align-[-3px]"
-        ></span>
+    <div class="flex min-w-0 flex-[1_1_560px] flex-col gap-[22px]">
+      <div class="text-muted text-mono font-mono tracking-[0.08em]">DÉVELOPPEUSE FRONT-END</div>
+      <h1 class="text-display m-0 leading-[0.95] font-bold tracking-[-0.035em]">
+        Jenny-Lee<br />Boulanger
       </h1>
 
-      <div class="flex flex-wrap gap-[10px]">
-        <AppButton v-for="social in SOCIAL_LINKS" :key="social.href" :href="social.href">
-          <AppIcon :name="social.icon" :size="14" />
-          {{ social.label }}
-        </AppButton>
+      <div class="flex flex-wrap items-center gap-3">
+        <ButtonGroup wrap>
+          <BaseButton variant="primary" href="#contact">
+            <AppSvgIcon name="send" />
+            Me contacter
+          </BaseButton>
+          <BaseButton
+            v-for="social in SOCIAL_LINKS"
+            :key="social.href"
+            :href="social.href"
+            external
+          >
+            <AppIcon :name="social.icon" :size="14" aria-hidden="true" />
+            {{ social.label }}
+          </BaseButton>
+        </ButtonGroup>
+        <span class="chip chip--sage">
+          <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true" class="block flex-none">
+            <circle cx="4" cy="4" r="4" fill="currentColor" />
+          </svg>
+          Disponible
+        </span>
       </div>
     </div>
-  </header>
+  </section>
 </template>

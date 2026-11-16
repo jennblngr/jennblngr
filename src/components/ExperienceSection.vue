@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { EXPERIENCE } from '@/data/portfolio'
 import { useExperienceStats } from '@/composables/useExperienceStats'
-import SectionCard from '@/components/SectionCard.vue'
+import SectionHeading from '@/components/SectionHeading.vue'
 import ListRenderer from '@/components/ListRenderer.vue'
 import ExperienceEntry from '@/components/ExperienceEntry.vue'
 
@@ -11,8 +11,7 @@ const { stats } = useExperienceStats()
 // #endregion
 
 // #region Computed
-// Remplace les stats codées en dur par la dernière synchronisation GitLab quand elle est
-// disponible ; sinon les valeurs de repli de src/data/portfolio.ts restent affichées.
+// Les chiffres viennent de la dernière synchronisation GitLab (public/experience-stats.json)
 const experience = computed(() =>
   EXPERIENCE.map((group) => {
     const live = stats.value[group.org]
@@ -25,11 +24,10 @@ const experience = computed(() =>
 </script>
 
 <template>
-  <SectionCard id="experience" label="experience">
-    <div>
-      <ListRenderer v-slot="{ item }" :items="experience">
-        <ExperienceEntry :experience="item" />
-      </ListRenderer>
-    </div>
-  </SectionCard>
+  <section id="experience" class="mb-[72px] flex flex-col gap-5">
+    <SectionHeading>/experience</SectionHeading>
+    <ListRenderer v-slot="{ item }" :items="experience">
+      <ExperienceEntry :experience="item" />
+    </ListRenderer>
+  </section>
 </template>

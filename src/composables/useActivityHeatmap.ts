@@ -1,42 +1,49 @@
 import { computed, onMounted, ref } from 'vue'
-import { useThemeStore } from '@/stores/theme'
-import type { ActivityData, ActivityDay, ActivityWeek, LegendStep, MonthLabel } from '@/types'
+import type { ActivityData, ActivityDay, ActivityWeek } from '@/types'
 
-const MONTHS: readonly string[] = [
-  'jan',
-  'fév',
-  'mar',
-  'avr',
-  'mai',
-  'juin',
-  'juil',
-  'août',
-  'sep',
-  'oct',
-  'nov',
-  'déc',
-]
-
-const DARK_STEPS: readonly string[] = ['#1a5c52', '#156a63', '#1d9187', '#24b5a8']
-const LIGHT_STEPS: readonly string[] = ['#d8f4f1', '#8de2db', '#2dd2c5', '#178279']
-const EMPTY_DARK = 'rgba(240,246,252,.055)'
-const EMPTY_LIGHT = 'rgba(0,0,0,.05)'
 const DAY_MS = 86400000
+
+/** Bornes basses des niveaux 1 à 4 (0 = aucune contribution). */
+const LEVEL_THRESHOLDS: readonly number[] = [1, 6, 13, 23]
+
+export const LEVEL_COUNT = LEVEL_THRESHOLDS.length + 1
+
+const DAY_LABEL = new Intl.DateTimeFormat('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
+
+const MONTH_LABEL = new Intl.DateTimeFormat('fr-FR', {
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
+
+function levelFor(count: number): number {
+  let level = 0
+  LEVEL_THRESHOLDS.forEach((threshold, i) => {
+    if (count >= threshold) level = i + 1
+  })
+  return level
+}
+
+/** Numéro de semaine ISO 8601. */
+export function isoWeek(date: Date): number {
+  const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()))
+  const day = d.getUTCDay() || 7
+  d.setUTCDate(d.getUTCDate() + 4 - day)
+  const yearStart = Date.UTC(d.getUTCFullYear(), 0, 1)
+  return Math.ceil(((d.getTime() - yearStart) / DAY_MS + 1) / 7)
+}
 
 export function useActivityHeatmap() {
   // #region Data
-  const theme = useThemeStore()
   const activity = ref<ActivityData | null>(null)
   // #endregion
 
   // #region Functions
-  function cellColor(count: number): string {
-    const isDark = theme.mode === 'dark'
-    if (!count) return isDark ? EMPTY_DARK : EMPTY_LIGHT
-    const steps = isDark ? DARK_STEPS : LIGHT_STEPS
-    return steps[Math.min(3, Math.floor((count - 1) / 3))]
-  }
-
   async function loadActivity(): Promise<void> {
     try {
       const response = await fetch('/activity.json')
@@ -45,6 +52,21 @@ export function useActivityHeatmap() {
     } catch {
       // fichier absent : la section reste vide
     }
+  }
+
+  /** Nombre de jours actifs consécutifs se terminant sur ce jour. */
+  function streakAt(index: number): number {
+    const counts = activity.value?.counts ?? []
+    let streak = 0
+    for (let i = index; i >= 0 && counts[i] > 0; i--) streak++
+    return streak
+  }
+
+  /** Vrai si ce jour est le plus actif de sa semaine (colonne). */
+  function isTopOfWeek(day: ActivityDay): boolean {
+    if (!day.count) return false
+    const week = weeks.value[day.week]
+    return day.count === Math.max(...week.days.map((d) => d.count))
   }
   // #endregion
 
@@ -63,10 +85,13 @@ export function useActivityHeatmap() {
         const count = counts[i]
         days.push({
           key: `d${i}`,
+          index: i,
+          week: w,
+          weekday: d,
           count,
-          bg: cellColor(count),
+          level: levelFor(count),
           date,
-          label: `${count} contribution${count > 1 ? 's' : ''} — ${date.getUTCDate()} ${MONTHS[date.getUTCMonth()]} ${date.getUTCFullYear()}`,
+          label: `${count} contribution${count > 1 ? 's' : ''} le ${DAY_LABEL.format(date)}`,
           detail: activity.value.details?.[i] ?? null,
         })
       }
@@ -75,34 +100,34 @@ export function useActivityHeatmap() {
     return result
   })
 
-  const monthLabels = computed<MonthLabel[]>(() => {
-    if (!activity.value) return []
-    const start = new Date(`${activity.value.start}T00:00:00Z`)
-    let lastMonth = -1
-    return weeks.value.map((_week, w) => {
-      const date = new Date(start.getTime() + w * 7 * DAY_MS)
-      const month = date.getUTCMonth()
-      let label = ''
-      if (month !== lastMonth && date.getUTCDate() <= 7) {
-        label = MONTHS[month]
-        lastMonth = month
-      }
-      return { key: `m${w}`, label } satisfies MonthLabel
-    })
-  })
-
-  const days = computed<ActivityDay[]>(() => weeks.value.flatMap((week) => week.days))
-
   const total = computed<number>(() => activity.value?.counts.reduce((sum, n) => sum + n, 0) ?? 0)
 
-  const legendSteps = computed<LegendStep[]>(() =>
-    [0, 2, 5, 8, 11].map((n, i) => ({ key: `l${i}`, bg: cellColor(n) })),
-  )
+  const sourceTotals = computed(() => {
+    const details = activity.value?.details ?? []
+    return details.reduce<{ gitlab: number; github: number }>(
+      (acc, detail) => {
+        acc.gitlab += detail?.gitlab ?? 0
+        acc.github += detail?.github ?? 0
+        return acc
+      },
+      { gitlab: 0, github: 0 },
+    )
+  })
+
+  const updated = computed<string>(() => activity.value?.updated ?? '')
+
+  const rangeLabel = computed<string>(() => {
+    const first = weeks.value[0]?.days[0]
+    const lastWeek = weeks.value[weeks.value.length - 1]
+    const last = lastWeek?.days[lastWeek.days.length - 1]
+    if (!first || !last) return ''
+    return `${MONTH_LABEL.format(first.date)} → ${MONTH_LABEL.format(last.date)}`
+  })
   // #endregion
 
   // #region Lifecycles
   onMounted(loadActivity)
   // #endregion
 
-  return { weeks, days, monthLabels, total, legendSteps }
+  return { weeks, total, sourceTotals, updated, rangeLabel, streakAt, isTopOfWeek }
 }
