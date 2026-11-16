@@ -1,47 +1,53 @@
 import type { ExperienceGroup, ProjectItem, SectionLink, SkillCategory, SocialLink } from '@/types'
 
-const BUILD_LINE = import.meta.env.DEV ? 'build in 000ms' : `build in __BUILD_DURATION_MS__ms`
+/** Début de l'activité professionnelle, sert au compteur « N ANS » de l'en-tête. */
+export const CAREER_START = '2021-04'
 
-export const BOOT_MESSAGES: readonly string[] = [
-  BUILD_LINE,
-  'vue.js app mounted',
-  'disponible en freelance',
-]
-
+// Le nombre de projets par techno vient de public/skills.json (scripts/sync-skills.mjs) ;
+// les technos absentes de ce fichier n'affichent pas de chiffre.
+// TODO: favorites à choisir (3 à 5), via `favorite: true`.
 export const SKILL_CATEGORIES: readonly SkillCategory[] = [
   {
-    title: 'front/',
+    title: 'Front',
+    letter: 'F',
+    tone: 'plain',
+    unit: 'projets',
     items: [
-      { icon: 'vue', label: 'vue.js' },
-      { icon: 'typescript', label: 'typescript' },
-      { icon: 'electron', label: 'electron' },
-      { icon: 'tailwind', label: 'tailwind' },
-      { icon: 'vite', label: 'vite' },
-      { icon: 'pinia', label: 'pinia' },
-      { icon: 'vitest', label: 'vitest' },
+      { name: 'vue.js' },
+      { name: 'typescript' },
+      { name: 'electron' },
+      { name: 'tailwind' },
+      { name: 'vite' },
+      { name: 'pinia' },
+      { name: 'vitest' },
     ],
   },
   {
-    title: 'tooling/',
+    title: 'Tooling',
+    letter: 'T',
+    tone: 'plain',
+    unit: 'projets',
     items: [
-      { icon: 'gitlabCi', label: 'gitlab ci' },
-      { icon: 'node', label: 'node' },
-      { icon: 'git', label: 'git' },
-      { icon: 'npm', label: 'npm' },
-      { icon: 'eslint', label: 'eslint' },
-      { icon: 'prettier', label: 'prettier' },
-      { icon: 'figma', label: 'figma' },
+      { name: 'gitlab ci' },
+      { name: 'node' },
+      { name: 'git' },
+      { name: 'npm' },
+      { name: 'eslint' },
+      { name: 'prettier' },
+      { name: 'figma' },
     ],
   },
   {
-    title: 'process/',
+    title: 'Process',
+    letter: 'P',
+    tone: 'sage',
     items: [
-      { icon: 'codeReview', label: 'revue de code' },
-      { icon: 'designSystem', label: 'design system' },
-      { icon: 'refactor', label: 'refactoring legacy' },
-      { icon: 'docs', label: 'documentation technique' },
-      { icon: 'internalDeps', label: 'gestion de dépendances internes' },
-      { icon: 'release', label: 'release & semver' },
+      { name: 'revue de code' },
+      { name: 'design system' },
+      { name: 'refactoring legacy' },
+      { name: 'documentation technique' },
+      { name: 'dépendances internes' },
+      { name: 'release & semver' },
     ],
   },
 ]
@@ -49,38 +55,48 @@ export const SKILL_CATEGORIES: readonly SkillCategory[] = [
 export const EXPERIENCE: readonly ExperienceGroup[] = [
   {
     org: 'caldera',
+    name: 'Caldera',
+    initial: 'C',
+    tone: 'plain',
+    start: '2022-09',
     roles: [
       {
-        period: 'juin 2025 — présent',
-        role: 'contractor',
+        title: 'Contractor',
+        start: '2025-06',
         bullets: [
           "Développement du wizard EasyMedia, fonctionnalité héritée de l'ancien RIP, nécessitant un refactoring conséquent de code legacy.",
           "Collaboration avec l'équipe UI/UX pour la mise en place d'un UI Kit au sein de l'entreprise.",
-          "Définition des nouvelles règles CSS et des composants de l'UI Kit, avec un suivi rigoureux de leur bon respect dans le code au démarrage du projet.",
-          "Passation de connaissance sur l'UI Kit auprès des développeurs historiques et des nouveaux arrivants, pour en assurer l'adoption autonome au sein de l'équipe.",
+          "Définition des nouvelles règles CSS et des composants de l'UI Kit, avec un suivi rigoureux de leur respect dans le code.",
+          "Passation de connaissance sur l'UI Kit auprès des développeurs historiques et des nouveaux arrivants.",
         ],
+        tags: ['ui kit', 'legacy', 'css'],
       },
       {
-        period: 'septembre 2022 — juin 2025',
-        role: 'développeuse front-end',
+        title: 'Développeuse front-end',
+        start: '2022-09',
+        end: '2025-06',
         bullets: [
-          "Développement de la fonctionnalité fondatrice du logiciel Direct-to-Garment, avec l'affichage d'un t-shirt au format SVG dans le studio Konva et d'une grille symbolisant la palette.",
-          "Conception de la fonctionnalité à l'origine du logiciel Direct-to-Film, un placement automatique (nesting) des visuels dans le studio Konva limitant les pertes de média pour les utilisateurs.",
-          'Co-création d’une librairie interne partagée entre 4 GUIs pour éliminer la duplication de code.',
-          'Conception d’une solution de mise à jour automatique des dépendances internes, permettent à chaque GUI de bénéficier des derniers changements en nightly, tous les matins.',
+          "Fonctionnalité fondatrice du logiciel Direct-to-Garment : affichage d'un t-shirt en SVG dans le studio Konva et d'une grille symbolisant la palette.",
+          'Conception du placement automatique (nesting) des visuels dans le studio Konva du logiciel Direct-to-Film, limitant les pertes de média.',
+          "Co-création d'une librairie interne partagée entre 4 GUIs pour éliminer la duplication de code.",
+          'Mise à jour automatique des dépendances internes : chaque GUI bénéficie des derniers changements en nightly, tous les matins.',
         ],
+        tags: ['konva', 'svg', 'librairie interne'],
       },
     ],
   },
   {
     org: 'indépendante',
+    name: 'Indépendante',
+    initial: 'I',
+    tone: 'sage',
+    start: '2021-04',
     roles: [
       {
-        period: 'avril 2021 — présent',
-        role: 'freelance',
-        bullets: [
+        title: 'Freelance — portfolios sur mesure',
+        start: '2021-04',
+        summary:
           'Conception et développement de portfolios sur mesure pour designers graphiques et artistes.',
-        ],
       },
     ],
   },
@@ -88,33 +104,56 @@ export const EXPERIENCE: readonly ExperienceGroup[] = [
 
 export const PROJECTS: readonly ProjectItem[] = [
   {
-    name: 'lea-bergougnoux',
-    desc: 'Portfolio sur mesure pour designer graphique. Conception, intégration et mise en ligne.',
+    slug: 'lea-bergougnoux',
+    type: 'web',
     year: '2024',
-    stack: ['vue.js', 'tailwind', 'strapi', 'postgresql', 'nginx'],
+    role: 'Conception & dev',
+    desc: 'Portfolio sur mesure pour designer graphique. Conception, intégration et mise en ligne.',
+    did: [
+      "Conception de l'interface avec la cliente",
+      'Intégration Vue.js et back-office Strapi',
+      'Mise en ligne et hébergement (Nginx)',
+    ],
+    stack: ['Vue.js', 'Tailwind', 'Strapi', 'PostgreSQL', 'Nginx'],
     url: 'https://leabergougnoux.com/',
+    primaryLabel: 'Voir le site',
     image: '/lea-bergougnoux.jpeg',
   },
   {
-    name: 'suzanne-laclautre',
-    desc: 'Portfolio sur mesure pour designer graphique. Conception, intégration et mise en ligne.',
+    slug: 'suzanne-laclautre',
+    type: 'web',
     year: '2023',
-    stack: ['vue.js', 'scss', 'strapi', 'postgresql', 'apache2'],
+    role: 'Conception & dev',
+    desc: 'Portfolio sur mesure pour designer graphique. Conception, intégration et mise en ligne.',
+    did: [
+      "Conception de l'interface avec la cliente",
+      'Intégration Vue.js et back-office Strapi',
+      'Mise en ligne et hébergement (Apache)',
+    ],
+    stack: ['Vue.js', 'SCSS', 'Strapi', 'PostgreSQL', 'Apache'],
     url: 'https://www.suzannelaclautre.fr/',
+    primaryLabel: 'Voir le site',
     image: '/suzanne-laclautre.jpeg',
   },
   {
-    name: 'eliana-pliskin-jacobs',
-    desc: 'Portfolio sur mesure pour artiste pluridisciplinaire. Conception, intégration et mise en ligne.',
+    slug: 'eliana-pliskin-jacobs',
+    type: 'web',
     year: '2022',
-    stack: ['vue.js', 'scss', 'strapi', 'postgresql', 'apache2'],
+    role: 'Conception & dev',
+    desc: 'Portfolio sur mesure pour artiste pluridisciplinaire. Conception, intégration et mise en ligne.',
+    did: [
+      "Conception de l'interface avec l'artiste",
+      'Intégration Vue.js et back-office Strapi',
+      'Mise en ligne et hébergement (Apache)',
+    ],
+    stack: ['Vue.js', 'SCSS', 'Strapi', 'PostgreSQL', 'Apache'],
     url: 'https://eliana-arts.com/',
+    primaryLabel: 'Voir le site',
     image: '/eliana-jacobs.jpeg',
   },
 ]
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
-  { label: 'contact', href: '#contact', icon: 'email' },
   { label: 'github/jennblngr', href: 'https://github.com/jennblngr', icon: 'github' },
   {
     label: 'linkedin/jennylee.boulanger',

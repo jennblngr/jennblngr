@@ -5,16 +5,12 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer
-    class="border-line text-dim mt-14 flex flex-wrap justify-between gap-5 border-t pt-5 text-[0.71875rem]"
-  >
-    <div>jenny-lee boulanger © {{ year }} · all systems <span class="text-accent">[ok]</span></div>
-    <div class="flex gap-3.5">
-      <span
-        ><span class="text-fg">1-{{ SECTIONS.length }}</span> jump</span
-      >
-      <span><span class="text-fg">l</span> light/dark</span>
-      <span><span class="text-fg">g</span> top</span>
+  <footer class="border-ink border-t-[1.5px]">
+    <div
+      class="text-muted text-label mx-auto flex max-w-[1120px] flex-wrap justify-between gap-4 px-6 py-[22px] font-mono"
+    >
+      <span>jenny-lee boulanger © {{ year }}</span>
+      <span>1–{{ SECTIONS.length }} sections · L clair/sombre · G haut</span>
     </div>
   </footer>
 </template>

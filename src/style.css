@@ -1,79 +1,346 @@
 @import 'tailwindcss';
 
-html {
-  font-size: 80%;
-}
-
 @theme {
-  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, Menlo, monospace;
 
-  --color-bg: #181a1f;
-  --color-nav-bg: rgba(24, 26, 31, 0.85);
-  --color-fg: #c8ccd4;
-  --color-dim: #515766;
-  --color-line: rgba(200, 204, 212, 0.1);
-  --color-dim-line: rgba(200, 204, 212, 0.28);
-  --color-inset: rgba(200, 204, 212, 0.045);
-  --color-accent: #24b5a8;
+  --color-accent: #c23d22;
+  --color-accent-hover: #a8321b;
+  --color-accent-pressed: #8e2a16;
+  --color-sage: #5a6849;
 
-  --animate-bootin: bootin 0.3s ease both;
-  --animate-blink: blink 1.1s step-end infinite;
+  /* Animation : durées et courbes (voir design/specs/spec_animation.html) */
+  --dur-instant: 80ms; /* appui, délai du tooltip */
+  --dur-fast: 120ms; /* couleurs, sorties courtes */
+  --dur-base: 200ms; /* focus soulevé, apparitions, thème */
+  --dur-slow: 320ms; /* dépliages */
+  --ease-move: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-color: ease-out;
+
+  /*
+   * Échelle typographique, en rem pour suivre la taille de police choisie dans le navigateur.
+   * La racine est à 75 % (12 px avec le réglage par défaut du navigateur) ;
+   * les valeurs en px indiquées correspondent à cette base.
+   */
+  --text-display: clamp(3rem, 8vw, 6.5rem); /* 36 → 78 · nom du hero */
+  --text-stat-lg: 2.75rem; /* 33 · total des contributions */
+  --text-stat: 2.5rem; /* 30 · chiffres de l'expérience */
+  --text-h2: 2.25rem; /* 27 · titres de section */
+  --text-title: 2.125rem; /* 25,5 · total de l'infobulle */
+  --text-stat-sm: 2rem; /* 24 · totaux GitLab / GitHub, titre du panneau projet */
+  --text-h3: 1.875rem; /* 22,5 · nom de l'entreprise */
+  --text-title-sm: 1.75rem; /* 21 · titre du panneau projet sur mobile */
+  --text-h4: 1.625rem; /* 19,5 · titres de carte et de poste */
+  --text-card: 1.3125rem; /* 15,75 · titre de carte projet */
+  --text-lead: 1.125rem; /* 13,5 · accroches courtes */
+  --text-body: 1.0625rem; /* 12,75 · texte courant */
+  --text-body-sm: 1rem; /* 12 · sous-titres */
+  --text-small: 0.9375rem; /* 11,25 · texte secondaire */
+  --text-mono: 0.875rem; /* 10,5 · chips et label du hero */
+  --text-label: 0.8125rem; /* 9,75 · labels mono */
+  --text-meta: 0.75rem; /* 9 · méta, badges de stack */
+  --text-micro: 0.6875rem; /* 8,25 · badges de type, mentions */
 }
 
-[data-theme='light'] {
-  --color-bg: #f4f5f7;
-  --color-nav-bg: rgba(244, 245, 247, 0.85);
-  --color-fg: #1c1f25;
-  --color-dim: #565b66;
-  --color-line: rgba(28, 31, 37, 0.1);
-  --color-dim-line: rgba(28, 31, 37, 0.28);
-  --color-inset: rgba(28, 31, 37, 0.045);
-  --color-accent: #24b5a8;
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surf: var(--surf);
+  --color-field: var(--field);
+  --color-ink: var(--ink);
+  --color-ink2: var(--ink2);
+  --color-ink3: var(--ink3);
+  --color-muted: var(--muted);
+  --color-line2: var(--line2);
+  --color-ph: var(--ph);
+  --color-hover: var(--hover);
+  --color-pressed: var(--pressed);
 }
 
-@keyframes blink {
-  0%,
-  49% {
-    opacity: 1;
+:root {
+  /* Échelle globale de l'interface : 0.8 = rendu d'un zoom navigateur à 80 % */
+  --ui-zoom: 0.8;
+}
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f1ede3;
+  --surf: #f7f4ec;
+  --field: #ffffff;
+  --ink: #1c1a17;
+  --ink2: #4a453e;
+  --ink3: #2e2a25;
+  --muted: #6b655b;
+  --line2: #8f887c;
+  --ph: #1c1a17;
+  --hover: #e4ded2;
+  --pressed: #d3ccbe;
+  --h0: #e2dccf;
+  --h1: #ebb4a3;
+  --h2: #de7b60;
+  --h3: #c23d22;
+  --h4: #7e2410;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #161513;
+  --surf: #1f1d1a;
+  --field: #262320;
+  --ink: #ede8dc;
+  --ink2: #c9c2b5;
+  --ink3: #ddd7cb;
+  --muted: #a39c8f;
+  --line2: #6e685e;
+  --ph: #2a2723;
+  --hover: #34302a;
+  --pressed: #423d36;
+  --h0: #2a2723;
+  --h1: #5a2a1e;
+  --h2: #8e3420;
+  --h3: #c23d22;
+  --h4: #f07a5a;
+}
+
+@layer base {
+  html {
+    font-size: 75%; /* 12 px, en gardant la préférence du navigateur */
+    /* Échelle globale de l'interface (texte, espacements, bordures), comme un zoom navigateur */
+    zoom: var(--ui-zoom);
+    scroll-padding-top: 88px;
   }
-  50%,
-  100% {
-    opacity: 0;
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--ink);
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
   }
 }
 
-@keyframes bootin {
-  from {
-    opacity: 0;
-    transform: translateY(3px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
+/* Mouvement réduit : les changements de couleur restent, 120 ms max */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-base: var(--dur-fast);
   }
 }
 
-.v-popper--theme-activity .v-popper__inner {
-  background: var(--color-bg);
-  color: var(--color-fg);
-  border: 1px solid var(--color-line);
-  border-radius: 8px;
-  padding: 10px 12px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+@layer base {
+  /* Bascule de thème : transition des couleurs uniquement, le temps du changement */
+  :root.theme-switching *,
+  :root.theme-switching *::before,
+  :root.theme-switching *::after {
+    transition:
+      background-color var(--dur-base) var(--ease-color),
+      border-color var(--dur-base) var(--ease-color),
+      color var(--dur-base) var(--ease-color),
+      fill var(--dur-base) var(--ease-color),
+      stroke var(--dur-base) var(--ease-color) !important;
+  }
 }
 
-.v-popper--theme-activity .v-popper__arrow-inner {
-  visibility: visible;
-  border-color: var(--color-bg);
-}
+/*
+ * Système de boutons (design/specs/spec_boutons.html).
+ * .btn = secondary · .btn--primary · .is-sel = selected/inverse · .btn--sm · .btn--icon
+ * .btn-group = boutons collés · .chip = même gabarit, non cliquable
+ */
+@layer components {
+  .btn {
+    all: unset;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 42px;
+    padding: 0 16px;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      background-color var(--dur-fast) var(--ease-color),
+      color var(--dur-fast) var(--ease-color),
+      transform var(--dur-base) var(--ease-move),
+      box-shadow var(--dur-base) var(--ease-move);
+  }
 
-.v-popper--theme-activity .v-popper__arrow-outer {
-  border-color: var(--color-line);
+  .btn svg {
+    display: block;
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+  }
+
+  .btn:hover {
+    background: var(--hover);
+    color: var(--ink);
+  }
+
+  /* Appui : descend de 1 px */
+  .btn:active {
+    background: var(--pressed);
+    transform: translateY(1px);
+    transition-duration: var(--dur-instant);
+  }
+
+  /* Focus clavier : feuille soulevée */
+  .btn:focus-visible {
+    z-index: 1;
+    outline: none;
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0 var(--color-accent);
+  }
+
+  .btn:focus-visible:active {
+    transform: translate(-3px, -2px);
+  }
+
+  .btn:not(.btn--primary, .is-sel):focus-visible {
+    background-color: var(--bg);
+  }
+
+  .btn:not(.btn--primary, .is-sel):focus-visible:hover {
+    background-color: var(--hover);
+  }
+
+  .btn--primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  .btn--primary:hover {
+    background: var(--color-accent-hover);
+    color: #fff;
+  }
+
+  .btn--primary:active {
+    background: var(--color-accent-pressed);
+  }
+
+  .btn--primary:focus-visible {
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+
+  .btn.is-sel,
+  .btn.is-sel:hover,
+  .btn.is-sel:active {
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  .btn.is-sel:focus-visible {
+    box-shadow: 3px 3px 0 var(--color-accent);
+  }
+
+  .btn--sm {
+    height: 34px;
+    padding: 0 12px;
+    font-size: var(--text-meta);
+  }
+
+  .btn--icon {
+    width: 42px;
+    padding: 0;
+  }
+
+  .btn--icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn--sm.btn--icon {
+    width: 34px;
+  }
+
+  .btn:disabled,
+  .btn[aria-disabled='true'] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .btn-group {
+    display: inline-flex;
+    align-items: stretch;
+  }
+
+  .btn-group > .btn + .btn {
+    margin-left: -1.5px;
+  }
+
+  .btn-group--wrap {
+    flex-wrap: wrap;
+  }
+
+  .btn-group--wrap > .btn {
+    margin-bottom: -1.5px;
+  }
+
+  .chip {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 42px;
+    padding: 0 16px;
+    border: 1.5px solid var(--ink);
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .chip--sage {
+    background: var(--color-sage);
+    color: #fff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn {
+      transition:
+        background-color var(--dur-fast) var(--ease-color),
+        color var(--dur-fast) var(--ease-color);
+    }
+
+    .btn:focus-visible,
+    .btn:active,
+    .btn:focus-visible:active {
+      transform: none;
+    }
+  }
 }
 
 .thin-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-dim-line) transparent;
+  scrollbar-color: var(--line2) transparent;
 }
 
 .thin-scrollbar::-webkit-scrollbar {
@@ -85,6 +352,5 @@ html {
 }
 
 .thin-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--color-dim-line);
-  border-radius: 3px;
+  background: var(--line2);
 }
