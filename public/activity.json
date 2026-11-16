@@ -364,7 +364,8 @@
     43,
     111,
     0,
-    16
+    16,
+    14
   ],
   "details": [
     {
@@ -3140,8 +3141,18 @@
         "autre": 1,
         "merge_request": 3
       }
+    },
+    {
+      "github": 1,
+      "gitlab": 13,
+      "gitlabByType": {
+        "merge_request": 4,
+        "push": 6,
+        "autre": 2,
+        "commentaire": 1
+      }
     }
   ],
-  "updated": "15 nov. 2026",
+  "updated": "16 nov. 2026",
   "source": "GitHub + GitLab"
 }
