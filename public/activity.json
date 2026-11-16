@@ -365,7 +365,7 @@
     111,
     0,
     16,
-    29
+    31
   ],
   "details": [
     {
@@ -3143,7 +3143,7 @@
       }
     },
     {
-      "github": 1,
+      "github": 3,
       "gitlab": 28,
       "gitlabByType": {
         "push": 17,
