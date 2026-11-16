@@ -365,7 +365,7 @@
     111,
     0,
     16,
-    14
+    29
   ],
   "details": [
     {
@@ -3144,11 +3144,11 @@
     },
     {
       "github": 1,
-      "gitlab": 13,
+      "gitlab": 28,
       "gitlabByType": {
-        "merge_request": 4,
-        "push": 6,
-        "autre": 2,
+        "push": 17,
+        "autre": 3,
+        "merge_request": 7,
         "commentaire": 1
       }
     }
