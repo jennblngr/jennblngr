@@ -2327,10 +2327,10 @@
       }
     },
     "2026-11-17": {
-      "count": 3,
+      "count": 8,
       "byType": {
-        "push": 1,
-        "merge_request": 1,
+        "merge_request": 2,
+        "push": 5,
         "autre": 1
       }
     }
