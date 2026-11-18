@@ -2327,8 +2327,9 @@
       }
     },
     "2026-11-17": {
-      "count": 8,
+      "count": 9,
       "byType": {
+        "commentaire": 1,
         "merge_request": 2,
         "push": 5,
         "autre": 1
