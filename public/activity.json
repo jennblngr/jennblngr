@@ -368,6 +368,7 @@
     31,
     13,
     1,
+    1,
     1
   ],
   "details": [
@@ -3172,8 +3173,12 @@
     {
       "github": 1,
       "gitlab": 0
+    },
+    {
+      "github": 1,
+      "gitlab": 0
     }
   ],
-  "updated": "19 nov. 2026",
+  "updated": "20 nov. 2026",
   "source": "GitHub + GitLab"
 }
