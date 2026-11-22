@@ -100,9 +100,9 @@ defineEmits<{
           {{ project.primaryLabel }}
           <AppSvgIcon name="external" />
         </BaseButton>
-        <BaseButton v-if="project.repo" :href="project.repo" external>
+        <BaseButton v-for="repo in project.repos" :key="repo.href" :href="repo.href" external>
           <AppSvgIcon name="code" />
-          Code source
+          {{ repo.label }}
         </BaseButton>
       </ButtonGroup>
     </div>

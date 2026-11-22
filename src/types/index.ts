@@ -40,6 +40,11 @@ export type ExperienceStatsPayload = Record<string, ExperienceStatsSnapshot>
 
 export type ProjectType = 'web' | 'mobile' | 'pwa' | 'script'
 
+export interface ProjectRepo {
+  label: string
+  href: string
+}
+
 export interface ProjectItem {
   slug: string
   /** Titre affiché (casse normale). */
@@ -53,7 +58,8 @@ export interface ProjectItem {
   url: string
   /** Libellé du lien principal (VOIR LE SITE, OUVRIR L'APP…). */
   primaryLabel: string
-  repo?: string
+  /** Dépôts publics, un bouton chacun (CODE SOURCE, ou CODE FRONT / CODE BACK si le projet est découpé). */
+  repos?: ProjectRepo[]
   image?: string
   gallery?: string[]
   /** Lignes de terminal affichées à la place d'une capture (type script). */

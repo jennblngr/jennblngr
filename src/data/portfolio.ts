@@ -115,6 +115,10 @@ export const PROJECTS: readonly ProjectItem[] = [
     ],
     stack: ['Vue.js', 'TypeScript', 'Tailwind', 'GraphQL', 'Strapi', 'PostgreSQL', 'Nginx'],
     url: 'https://leabergougnoux.com/',
+    repos: [
+      { label: 'Code front', href: 'https://github.com/jennblngr/lea-bergougnoux-front' },
+      { label: 'Code back', href: 'https://github.com/jennblngr/lea-bergougnoux-cms' },
+    ],
     primaryLabel: 'Voir le site',
     image: '/lea-bergougnoux.jpeg',
   },
