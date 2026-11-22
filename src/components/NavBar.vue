@@ -41,7 +41,7 @@ watch(activeId, (id) => {
             :selected="activeId === section.id"
             :aria-current="activeId === section.id ? 'location' : undefined"
           >
-            /{{ section.label }}
+            {{ section.label }}
           </BaseButton>
         </ButtonGroup>
       </div>
