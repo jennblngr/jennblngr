@@ -161,6 +161,10 @@ export const PROJECTS: readonly ProjectItem[] = [
       'Apache',
     ],
     url: 'https://eliana-arts.com/',
+    repos: [
+      { label: 'Code front', href: 'https://github.com/jennblngr/eliana-jacobs-front' },
+      { label: 'Code back', href: 'https://github.com/jennblngr/eliana-jacobs-cms' },
+    ],
     primaryLabel: 'Voir le site',
     image: '/eliana-jacobs.jpeg',
   },
