@@ -120,17 +120,6 @@ const roles = computed(() =>
           >
             <li v-for="bullet in role.bullets" :key="bullet">{{ bullet }}</li>
           </ul>
-          <div
-            v-if="role.tags"
-            class="text-ink2 text-meta flex flex-wrap gap-2 font-mono tracking-[0.08em] uppercase"
-          >
-            <span
-              v-for="tag in role.tags"
-              :key="tag"
-              class="border-line2 border-[1.5px] px-[9px] py-1"
-              >{{ tag }}</span
-            >
-          </div>
         </div>
       </article>
     </template>

@@ -12,7 +12,6 @@ export interface ExperienceRole {
   end?: YearMonth
   bullets?: string[]
   summary?: string
-  tags?: string[]
 }
 
 export interface ExperienceStats {

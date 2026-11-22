@@ -69,7 +69,6 @@ export const EXPERIENCE: readonly ExperienceGroup[] = [
           "Définition des nouvelles règles CSS et des composants de l'UI Kit, avec un suivi rigoureux de leur respect dans le code.",
           "Passation de connaissance sur l'UI Kit auprès des développeurs historiques et des nouveaux arrivants.",
         ],
-        tags: ['ui kit', 'legacy', 'css'],
       },
       {
         title: 'Développeuse front-end',
@@ -81,7 +80,6 @@ export const EXPERIENCE: readonly ExperienceGroup[] = [
           "Co-création d'une librairie interne partagée entre 4 GUIs pour éliminer la duplication de code.",
           'Mise à jour automatique des dépendances internes : chaque GUI bénéficie des derniers changements en nightly, tous les matins.',
         ],
-        tags: ['konva', 'svg', 'librairie interne'],
       },
     ],
   },
