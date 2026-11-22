@@ -58,8 +58,11 @@ const roles = computed(() =>
       <span class="border-ink border-[1.5px] px-3 py-1.5" :class="MONO_LABEL">{{ period }}</span>
     </div>
 
-    <div v-if="statBlocks.length" class="border-ink bg-surf border-b-[1.5px]">
-      <div class="grid grid-cols-3">
+    <!-- Même règle que les chiffres de /activity : 3 cases égales séparées par un trait -->
+    <div v-if="statBlocks.length" class="border-ink bg-surf @container border-b-[1.5px]">
+      <div
+        class="divide-ink grid grid-cols-1 divide-y-[1.5px] @min-[760px]:grid-cols-3 @min-[760px]:divide-x-[1.5px] @min-[760px]:divide-y-0"
+      >
         <div
           v-for="stat in statBlocks"
           :key="stat.label"

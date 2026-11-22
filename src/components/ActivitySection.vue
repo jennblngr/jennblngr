@@ -182,26 +182,27 @@ onUnmounted(() => {
       <template v-if="updated" #meta>Mis à jour le {{ updated }}</template>
     </SectionHeading>
 
-    <div class="border-ink flex flex-wrap border-[1.5px]">
+    <!-- 3 cases égales, alignées sur les colonnes de /skills ; empilées en dessous du même seuil -->
+    <div class="@container">
       <div
-        class="bg-accent border-ink flex flex-[2_1_280px] flex-col gap-1.5 border-r-[1.5px] px-6 py-[22px] text-white"
+        class="border-ink divide-ink grid grid-cols-1 divide-y-[1.5px] border-[1.5px] @min-[760px]:grid-cols-3 @min-[760px]:divide-x-[1.5px] @min-[760px]:divide-y-0"
       >
-        <span class="text-stat-lg leading-[1.1] font-bold tracking-[-0.02em]">{{ total }}</span>
-        <span class="text-label font-mono tracking-[0.08em]">CONTRIBUTIONS</span>
-      </div>
-      <div
-        class="border-ink flex flex-[1_1_200px] flex-col gap-1.5 border-r-[1.5px] px-6 py-[22px]"
-      >
-        <span class="text-stat-sm leading-[1.2] font-bold tracking-[-0.02em]">{{
-          sourceTotals.gitlab
-        }}</span>
-        <span class="text-muted text-label font-mono tracking-[0.08em]"># GITLAB</span>
-      </div>
-      <div class="flex flex-[1_1_200px] flex-col gap-1.5 px-6 py-[22px]">
-        <span class="text-stat-sm leading-[1.2] font-bold tracking-[-0.02em]">{{
-          sourceTotals.github
-        }}</span>
-        <span class="text-muted text-label font-mono tracking-[0.08em]"># GITHUB</span>
+        <div class="bg-accent flex min-w-0 flex-col gap-1.5 px-6 py-[22px] text-white">
+          <span class="text-stat-lg leading-[1.1] font-bold tracking-[-0.02em]">{{ total }}</span>
+          <span class="text-label font-mono tracking-[0.08em]">CONTRIBUTIONS</span>
+        </div>
+        <div class="flex min-w-0 flex-col gap-1.5 px-6 py-[22px]">
+          <span class="text-stat-sm leading-[1.2] font-bold tracking-[-0.02em]">{{
+            sourceTotals.gitlab
+          }}</span>
+          <span class="text-muted text-label font-mono tracking-[0.08em]"># GITLAB</span>
+        </div>
+        <div class="flex min-w-0 flex-col gap-1.5 px-6 py-[22px]">
+          <span class="text-stat-sm leading-[1.2] font-bold tracking-[-0.02em]">{{
+            sourceTotals.github
+          }}</span>
+          <span class="text-muted text-label font-mono tracking-[0.08em]"># GITHUB</span>
+        </div>
       </div>
     </div>
 
