@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { ProjectItem } from '@/types'
 import TypeBadge from '@/components/TypeBadge.vue'
 import BaseButton from '@/components/BaseButton.vue'
 import ButtonGroup from '@/components/ButtonGroup.vue'
 import AppSvgIcon from '@/components/AppSvgIcon.vue'
+import ImageLightbox from '@/components/ImageLightbox.vue'
 
 // #region Data
 defineProps<{
@@ -15,6 +17,8 @@ defineProps<{
 defineEmits<{
   close: []
 }>()
+
+const lightbox = ref<InstanceType<typeof ImageLightbox> | null>(null)
 // #endregion
 </script>
 
@@ -33,14 +37,33 @@ defineEmits<{
         <span v-for="(line, i) in project.terminal" :key="i">{{ line }}</span>
       </div>
       <template v-else>
-        <div class="bg-ph h-[192px] overflow-hidden sm:h-[240px]">
+        <!-- Clic sur l'aperçu : l'image s'ouvre en grand dans une lightbox -->
+        <button
+          v-if="project.image"
+          type="button"
+          class="pj-zoom bg-ph group relative block h-[192px] w-full cursor-zoom-in overflow-hidden sm:h-[240px]"
+          :aria-label="`Agrandir la capture du projet ${project.name}`"
+          @click="lightbox?.open()"
+        >
           <img
-            v-if="project.image"
             :src="project.image"
             :alt="`Capture du projet ${project.name}`"
             class="block h-full w-full object-cover"
           />
-        </div>
+          <span
+            aria-hidden="true"
+            class="border-ink bg-surf text-ink absolute right-2 bottom-2 flex h-8 w-8 items-center justify-center border-[1.2px] transition-transform duration-[var(--dur-fast)] group-hover:scale-110 [&>svg]:h-4 [&>svg]:w-4"
+          >
+            <AppSvgIcon name="zoom" />
+          </span>
+        </button>
+        <div v-else class="bg-ph h-[192px] sm:h-[240px]"></div>
+        <ImageLightbox
+          v-if="project.image"
+          ref="lightbox"
+          :src="project.image"
+          :alt="`Capture du projet ${project.name}`"
+        />
         <div v-if="project.gallery?.length" class="grid grid-cols-3 gap-3">
           <div v-for="src in project.gallery.slice(0, 3)" :key="src" class="bg-ph h-[60.8px]">
             <img :src="src" alt="" loading="lazy" class="block h-full w-full object-cover" />
