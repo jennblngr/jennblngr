@@ -8,11 +8,17 @@
 // d'entreprise "portfolio-activity-sync" (script sync-gitlab-activity.mjs). S'il n'est plus mis à
 // jour, les jours GitLab déjà persistés restent figés et le graphe continue avec GitHub.
 //
+// Les commits de synchro signés par l'utilisatrice (ceux du pipeline GitLab notamment) comptent
+// comme contributions GitHub : ils sont soustraits du calendrier, jour par jour (rétroactif sur
+// toute la fenêtre). Les commits de github-actions[bot] ne sont pas comptés par GitHub.
+//
 // Lancé par .github/workflows/deploy.yml avant chaque build (push sur main + cron quotidien).
 //
 // Variables d'environnement (voir .env.example) :
 //   GITHUB_USERNAME   identifiant GitHub perso
 //   GITHUB_TOKEN      PAT GitHub, scope minimal (lecture profil) — secret CONTRIBUTIONS_READ_TOKEN en CI
+//   GITHUB_REPOSITORY dépôt du portfolio (owner/repo), fourni par GitHub Actions ;
+//                     défaut : <GITHUB_USERNAME>/<GITHUB_USERNAME>
 //
 // Usage : node scripts/sync-activity.mjs
 
@@ -62,6 +68,34 @@ async function fetchGithubCalendar({ username, token, from, to }) {
   return map
 }
 
+// Messages des commits qui ne font que mettre à jour les données du site.
+const SYNC_COMMIT_RE = /^chore\(data\): sync /
+
+// Nombre de commits de synchro signés par `username` dans `repo`, par jour (UTC).
+async function fetchSyncCommitCounts({ username, token, repo, since }) {
+  const counts = new Map()
+  for (let page = 1; ; page++) {
+    const url = new URL(`https://api.github.com/repos/${repo}/commits`)
+    url.search = new URLSearchParams({ since, per_page: '100', page: String(page) })
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `bearer ${token}`,
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'portfolio-activity-sync',
+      },
+    })
+    if (!res.ok) throw new Error(`GitHub API ${res.status} : ${await res.text()}`)
+    const commits = await res.json()
+    // Filtre `author` de l'API non fiable avec l'adresse noreply : on filtre sur le login lié.
+    for (const { author, commit } of commits) {
+      if (author?.login !== username || !SYNC_COMMIT_RE.test(commit.message)) continue
+      const date = commit.author.date.slice(0, 10)
+      counts.set(date, (counts.get(date) ?? 0) + 1)
+    }
+    if (commits.length < 100) return counts
+  }
+}
+
 async function main() {
   loadDotEnv()
 
@@ -76,6 +110,17 @@ async function main() {
     from: `${from}T00:00:00Z`,
     to: `${to}T23:59:59Z`,
   })
+
+  const repo = process.env.GITHUB_REPOSITORY || `${username}/${username}`
+  const syncCommits = await fetchSyncCommitCounts({ username, token, repo, since: `${from}T00:00:00Z` })
+  let excluded = 0
+  for (const [date, n] of syncCommits) {
+    if (!fetched.has(date)) continue
+    const count = fetched.get(date)
+    fetched.set(date, Math.max(0, count - n))
+    excluded += Math.min(count, n)
+  }
+  console.log(`GitHub : ${excluded} commit(s) de synchro exclus (${repo}).`)
 
   const github = await readJson(GITHUB_ACTIVITY_PATH, { days: {} })
   for (const [date, count] of fetched) github.days[date] = count
