@@ -42,6 +42,8 @@ export type ProjectType = 'web' | 'mobile' | 'pwa' | 'script'
 
 export interface ProjectItem {
   slug: string
+  /** Titre affiché (casse normale). */
+  name: string
   type: ProjectType
   year: string
   role: string

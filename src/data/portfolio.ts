@@ -103,6 +103,7 @@ export const EXPERIENCE: readonly ExperienceGroup[] = [
 export const PROJECTS: readonly ProjectItem[] = [
   {
     slug: 'lea-bergougnoux',
+    name: 'Léa Bergougnoux',
     type: 'web',
     year: '2024',
     role: 'Conception & dev',
@@ -119,6 +120,7 @@ export const PROJECTS: readonly ProjectItem[] = [
   },
   {
     slug: 'suzanne-laclautre',
+    name: 'Suzanne Laclautre',
     type: 'web',
     year: '2023',
     role: 'Conception & dev',
@@ -135,6 +137,7 @@ export const PROJECTS: readonly ProjectItem[] = [
   },
   {
     slug: 'eliana-pliskin-jacobs',
+    name: 'Eliana Pliskin-Jacobs',
     type: 'web',
     year: '2022',
     role: 'Conception & dev',

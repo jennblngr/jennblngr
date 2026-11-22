@@ -37,7 +37,7 @@ defineEmits<{
           <img
             v-if="project.image"
             :src="project.image"
-            :alt="`Capture du projet ${project.slug}`"
+            :alt="`Capture du projet ${project.name}`"
             class="block h-full w-full object-cover"
           />
         </div>
@@ -64,7 +64,7 @@ defineEmits<{
           <h3
             class="text-title-sm sm:text-stat-sm m-0 leading-[1.05] font-bold tracking-[-0.02em] break-words"
           >
-            /{{ project.slug }}
+            {{ project.name }}
           </h3>
         </div>
         <BaseButton size="sm" @click="$emit('close')">

@@ -64,8 +64,8 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
     <!-- Hauteur constante : titre sur 1 ligne, technos sur 2 lignes max, pied ≥ 47 px -->
     <span
       class="text-card overflow-hidden leading-[1.15] font-bold text-ellipsis whitespace-nowrap"
-      :title="`/${project.slug}`"
-      >/{{ project.slug }}</span
+      :title="project.name"
+      >{{ project.name }}</span
     >
 
     <span
