@@ -138,6 +138,23 @@ export const PROJECTS: readonly ProjectItem[] = [
     image: '/3d-print-dashboard.jpeg',
   },
   {
+    slug: 'proofmate',
+    name: 'Proofmate',
+    type: 'extension',
+    year: '2026',
+    desc: "Extension Chrome et Firefox qui relève les fautes d'anglais dans les champs de texte et les explique en français. Conçue pour comprendre ses erreurs plutôt que simplement les corriger : elle conserve un historique des fautes, regroupées par catégorie et par règle, pour identifier ses points faibles et progresser.",
+    did: [
+      "Conception et développement de l'extension en Manifest V3, commune à Chrome et Firefox",
+      "Analyse du texte par l'API Claude, avec une réponse structurée : correction, catégorie et explication en français",
+      'Soulignement des erreurs dans le champ et panneau de corrections isolé en Shadow DOM, avec application en un clic',
+      'Historique local des erreurs par catégorie et par règle, sur 7 jours, 30 jours ou toute la période',
+    ],
+    stack: ['JavaScript', 'Manifest V3', 'Shadow DOM', 'API Claude'],
+    url: 'https://github.com/jennblngr/proofmate',
+    primaryLabel: 'Voir le code',
+    image: '/proofmate.jpeg',
+  },
+  {
     slug: 'lea-bergougnoux',
     name: 'Léa Bergougnoux',
     type: 'web',
