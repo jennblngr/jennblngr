@@ -17,7 +17,7 @@ const CARD_MIN_WIDTH = 192
 const MAX_COLUMNS = 4
 /** Sous cette largeur de grille, le panneau s'empile (≈ 840 px de fenêtre). */
 const PANEL_WIDE_MIN = 634
-const TYPE_ORDER: readonly ProjectType[] = ['web', 'mobile', 'pwa', 'script']
+const TYPE_ORDER: readonly ProjectType[] = ['web', 'mobile', 'pwa', 'extension', 'script']
 
 // #region Data
 const filter = ref<ProjectFilter>('all')

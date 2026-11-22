@@ -38,7 +38,7 @@ export interface ExperienceStatsSnapshot extends ExperienceStats {
 
 export type ExperienceStatsPayload = Record<string, ExperienceStatsSnapshot>
 
-export type ProjectType = 'web' | 'mobile' | 'pwa' | 'script'
+export type ProjectType = 'web' | 'mobile' | 'pwa' | 'extension' | 'script'
 
 export interface ProjectRepo {
   label: string

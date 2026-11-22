@@ -8,6 +8,7 @@
   --color-accent-hover: #a8321b;
   --color-accent-pressed: #8e2a16;
   --color-sage: #5a6849;
+  --color-slate: #44607f; /* badge Extension */
 
   /* Animation : durées et courbes (voir design/specs/spec_animation.html) */
   --dur-instant: 80ms; /* appui, délai du tooltip */

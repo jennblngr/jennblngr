@@ -9,6 +9,7 @@ const TYPE_CLASSES: Record<ProjectType, string> = {
   web: '',
   mobile: 'bg-sage text-white',
   pwa: 'bg-accent text-white',
+  extension: 'bg-slate text-white',
   script: 'bg-ink text-bg',
 }
 </script>
