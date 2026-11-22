@@ -57,9 +57,7 @@ defineEmits<{
         <div class="flex min-w-0 flex-col gap-2">
           <span class="flex flex-wrap items-center gap-[10px]">
             <TypeBadge :type="project.type" />
-            <span class="text-muted text-meta font-mono"
-              >{{ project.year }} · {{ project.role }}</span
-            >
+            <span class="text-muted text-meta font-mono">{{ project.year }}</span>
           </span>
           <h3
             class="text-title-sm sm:text-stat-sm m-0 leading-[1.05] font-bold tracking-[-0.02em] break-words"

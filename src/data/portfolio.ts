@@ -106,7 +106,6 @@ export const PROJECTS: readonly ProjectItem[] = [
     name: 'Léa Bergougnoux',
     type: 'web',
     year: '2024',
-    role: 'Conception & dev',
     desc: 'Portfolio sur mesure pour designer graphique. Développement front-end et back-end, et mise en ligne.',
     did: [
       'Développement front-end en Vue.js',
@@ -123,7 +122,6 @@ export const PROJECTS: readonly ProjectItem[] = [
     name: 'Suzanne Laclautre',
     type: 'web',
     year: '2023',
-    role: 'Conception & dev',
     desc: 'Portfolio sur mesure pour designer graphique. Développement front-end et back-end, et mise en ligne.',
     did: [
       'Développement front-end en Vue.js',
@@ -140,7 +138,6 @@ export const PROJECTS: readonly ProjectItem[] = [
     name: 'Eliana Pliskin-Jacobs',
     type: 'web',
     year: '2022',
-    role: 'Conception & dev',
     desc: 'Portfolio sur mesure pour artiste pluridisciplinaire. Conception, intégration et mise en ligne.',
     did: [
       "Conception de l'interface avec l'artiste",

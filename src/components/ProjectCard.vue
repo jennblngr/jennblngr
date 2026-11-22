@@ -77,9 +77,8 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
     </span>
 
     <span
-      class="border-line2 text-meta mt-auto flex min-h-[47px] items-center justify-between gap-2 border-t border-dashed pt-3 font-mono tracking-[0.06em]"
+      class="border-line2 text-meta mt-auto flex min-h-[47px] items-center justify-end gap-2 border-t border-dashed pt-3 font-mono tracking-[0.06em]"
     >
-      <span class="text-muted">{{ project.role }}</span>
       <!-- Toute la carte est le bouton : celui-ci n'est qu'un repère visuel -->
       <BaseButton size="sm" decorative :selected="isOpen">
         <AppSvgIcon :name="isOpen ? 'minus' : 'plus'" />

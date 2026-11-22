@@ -46,7 +46,6 @@ export interface ProjectItem {
   name: string
   type: ProjectType
   year: string
-  role: string
   desc: string
   did: string[]
   /** Liste complète ; la carte n'affiche que les 3 premières. */
