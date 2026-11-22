@@ -209,7 +209,11 @@ onUnmounted(() => {
       ref="boxEl"
       class="border-ink bg-surf relative [overflow-x:clip] border-[1.5px] p-5 sm:p-7"
     >
-      <div ref="scrollEl" class="thin-scrollbar overflow-x-auto pt-1" @scroll="hide">
+      <div
+        ref="scrollEl"
+        class="[scrollbar-width:none] overflow-x-auto pt-1 [&::-webkit-scrollbar]:hidden"
+        @scroll="hide"
+      >
         <div
           ref="gridEl"
           role="group"

@@ -338,19 +338,3 @@
   }
 }
 
-.thin-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: var(--line2) transparent;
-}
-
-.thin-scrollbar::-webkit-scrollbar {
-  height: 6px;
-}
-
-.thin-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.thin-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--line2);
-}
