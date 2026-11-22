@@ -102,6 +102,24 @@ export const EXPERIENCE: readonly ExperienceGroup[] = [
 
 export const PROJECTS: readonly ProjectItem[] = [
   {
+    slug: 'scrabble-entre-amis',
+    name: 'Scrabble entre amis',
+    type: 'pwa',
+    year: '2026',
+    desc: 'Jeu de Scrabble francophone en temps réel, pour deux ou trois joueurs à distance, sur Android et iOS. Conçu comme alternative aux applications existantes, chargées de publicités intrusives : une PWA installable et privée, qui notifie chaque joueur quand vient son tour.',
+    did: [
+      'Conception et développement de la PWA en React et TypeScript',
+      'Moteur de jeu et parties en temps réel avec Fastify, Socket.io et PostgreSQL',
+      'Invitations par lien à usage unique et notifications push à chaque tour',
+      'Déploiement continu sur un VPS avec GitHub Actions, Docker et Nginx',
+    ],
+    stack: ['React', 'TypeScript', 'Socket.io', 'Fastify', 'PostgreSQL', 'Docker', 'Nginx'],
+    url: 'https://scrabble.jennblngr.com/#/demo',
+    primaryLabel: 'Essayer la démo',
+    repos: [{ label: 'Code source', href: 'https://github.com/jennblngr/scrabble' }],
+    image: '/scrabble-entre-amis.jpeg',
+  },
+  {
     slug: 'lea-bergougnoux',
     name: 'Léa Bergougnoux',
     type: 'web',
