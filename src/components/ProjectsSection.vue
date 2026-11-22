@@ -13,10 +13,10 @@ type ProjectFilter = 'all' | ProjectType
 const PANEL_ID = 'project-detail'
 const HASH_PREFIX = '#projects/'
 /** Largeur minimale d'une carte : fixe le nombre de cartes par page (4 max). */
-const CARD_MIN_WIDTH = 240
+const CARD_MIN_WIDTH = 192
 const MAX_COLUMNS = 4
 /** Sous cette largeur de grille, le panneau s'empile (≈ 840 px de fenêtre). */
-const PANEL_WIDE_MIN = 792
+const PANEL_WIDE_MIN = 634
 const TYPE_ORDER: readonly ProjectType[] = ['web', 'mobile', 'pwa', 'script']
 
 // #region Data
@@ -189,7 +189,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="projects" class="mb-[72px] flex flex-col gap-5">
+  <section id="projects" class="mb-[57.6px] flex flex-col gap-5">
     <SectionHeading>
       /projects
       <template #actions>
@@ -213,7 +213,7 @@ onUnmounted(() => {
       role="region"
       aria-roledescription="carrousel"
       aria-label="Projets"
-      class="border-ink grid border-t-[1.5px] border-l-[1.5px]"
+      class="border-ink grid border-t-[1.2px] border-l-[1.2px]"
       :class="swapClass"
       :style="{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }"
       @keydown="handleGridKeydown"
@@ -259,7 +259,7 @@ onUnmounted(() => {
           <span
             v-for="n in pageCount"
             :key="n"
-            class="border-ink h-2.5 w-2.5 border-[1.5px]"
+            class="border-ink h-2.5 w-2.5 border-[1.2px]"
             :class="n - 1 === page && 'bg-ink'"
           ></span>
         </span>
@@ -274,7 +274,7 @@ onUnmounted(() => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2.2"
+              stroke-width="1.76"
               stroke-linecap="round"
               stroke-linejoin="round"
               aria-hidden="true"
@@ -292,7 +292,7 @@ onUnmounted(() => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2.2"
+              stroke-width="1.76"
               stroke-linecap="round"
               stroke-linejoin="round"
               aria-hidden="true"
@@ -309,11 +309,11 @@ onUnmounted(() => {
 <style scoped>
 /* Cases vides : complètent la rangée, fond pointillé */
 .pj-empty {
-  border-right: 1.5px solid var(--ink);
-  border-bottom: 1.5px solid var(--ink);
+  border-right: 1.2px solid var(--ink);
+  border-bottom: 1.2px solid var(--ink);
   background-color: var(--bg);
-  background-image: radial-gradient(circle, var(--line2) 1px, transparent 1.4px);
-  background-size: 16px 16px;
+  background-image: radial-gradient(circle, var(--line2) 0.8px, transparent 1.12px);
+  background-size: 12.8px 12.8px;
 }
 
 /* Dépliage : hauteur en 320 ms, puis contenu décalé de 120 ms ; fermeture plus rapide */
@@ -329,7 +329,7 @@ onUnmounted(() => {
 
 .pj-detail-body {
   opacity: 0;
-  transform: translateY(-12px);
+  transform: translateY(-9.6px);
   transition:
     opacity 180ms var(--ease-color),
     transform 180ms var(--ease-color);

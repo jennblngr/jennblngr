@@ -47,34 +47,34 @@ const streakLabel = computed(() => {
 </script>
 
 <template>
-  <div class="border-ink bg-field flex flex-col border-[1.5px] shadow-[5px_5px_0_var(--ink)]">
+  <div class="border-ink bg-field flex flex-col border-[1.2px] shadow-[4px_5px_0_var(--ink)]">
     <div
-      class="border-ink text-meta flex items-center justify-between border-b-[1.5px] px-[14px] py-[10px] font-mono tracking-[0.08em]"
+      class="border-ink text-meta flex items-center justify-between border-b-[1.2px] px-[11.2px] py-[8px] font-mono tracking-[0.08em]"
     >
       <span class="font-bold">{{ dateLabel }}</span>
       <span class="text-muted">SEM. {{ week }}</span>
     </div>
 
-    <div v-if="day.count" class="flex flex-col gap-3 px-[14px] pt-[14px] pb-3">
+    <div v-if="day.count" class="flex flex-col gap-3 px-[11.2px] pt-[11.2px] pb-3">
       <div class="flex items-baseline gap-2">
         <span class="text-title leading-none font-bold tracking-[-0.03em]">{{ day.count }}</span>
         <span class="text-ink2 text-small">contribution{{ day.count > 1 ? 's' : '' }}</span>
       </div>
-      <div class="border-ink flex h-[10px] border-[1.5px]">
+      <div class="border-ink flex h-[8px] border-[1.2px]">
         <span class="bg-accent" :style="{ width: gitlabPct }"></span>
         <span class="bg-ink flex-auto"></span>
       </div>
       <div class="text-meta flex justify-between font-mono">
         <span class="flex items-center gap-1.5">
-          <span class="bg-accent h-[9px] w-[9px]"></span>GitLab <b>{{ gitlab }}</b>
+          <span class="bg-accent h-[7.2px] w-[7.2px]"></span>GitLab <b>{{ gitlab }}</b>
         </span>
         <span class="flex items-center gap-1.5">
-          <span class="bg-ink h-[9px] w-[9px]"></span>GitHub <b>{{ github }}</b>
+          <span class="bg-ink h-[7.2px] w-[7.2px]"></span>GitHub <b>{{ github }}</b>
         </span>
       </div>
       <div
         v-if="gitlab"
-        class="border-line2 text-ink2 text-micro flex border-t border-dashed pt-[10px] font-mono tracking-[0.06em]"
+        class="border-line2 text-ink2 text-micro flex border-t border-dashed pt-[8px] font-mono tracking-[0.06em]"
       >
         <span
           v-for="item in breakdown"
@@ -87,13 +87,13 @@ const streakLabel = computed(() => {
       </div>
     </div>
 
-    <div v-else class="flex flex-col gap-1 p-[14px]">
+    <div v-else class="flex flex-col gap-1 p-[11.2px]">
       <span class="text-lead font-bold">Pas de commit ce jour-là.</span>
       <span class="text-ink2 text-mono italic">Même les pipelines se reposent.</span>
     </div>
 
     <div
-      class="border-ink text-micro flex items-center justify-between gap-3 border-t-[1.5px] px-[14px] py-2 font-mono tracking-[0.08em]"
+      class="border-ink text-micro flex items-center justify-between gap-3 border-t-[1.2px] px-[11.2px] py-2 font-mono tracking-[0.08em]"
       :class="isTop ? 'bg-sage text-white' : 'bg-bg text-ink2'"
     >
       <span class="whitespace-nowrap">{{ streakLabel }}</span>

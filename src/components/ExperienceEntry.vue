@@ -39,12 +39,12 @@ const roles = computed(() =>
 </script>
 
 <template>
-  <div class="border-ink border-[1.5px]">
+  <div class="border-ink border-[1.2px]">
     <div
-      class="border-ink flex flex-wrap items-center gap-[18px] border-b-[1.5px] px-5 py-6 sm:px-7"
+      class="border-ink flex flex-wrap items-center gap-[14.4px] border-b-[1.2px] px-5 py-6 sm:px-7"
     >
       <span
-        class="border-ink text-h4 flex h-[54px] w-[54px] items-center justify-center border-[1.5px] font-bold"
+        class="border-ink text-h4 flex h-[43.2px] w-[43.2px] items-center justify-center border-[1.2px] font-bold"
         :class="experience.tone === 'sage' && 'bg-sage text-white'"
         aria-hidden="true"
         >{{ experience.initial }}</span
@@ -55,18 +55,18 @@ const roles = computed(() =>
         </h3>
         <span class="text-muted" :class="MONO_LABEL">{{ duration }}</span>
       </div>
-      <span class="border-ink border-[1.5px] px-3 py-1.5" :class="MONO_LABEL">{{ period }}</span>
+      <span class="border-ink border-[1.2px] px-3 py-1.5" :class="MONO_LABEL">{{ period }}</span>
     </div>
 
     <!-- Même règle que les chiffres de /activity : 3 cases égales séparées par un trait -->
-    <div v-if="statBlocks.length" class="border-ink bg-surf @container border-b-[1.5px]">
+    <div v-if="statBlocks.length" class="border-ink bg-surf @container border-b-[1.2px]">
       <div
-        class="divide-ink grid grid-cols-1 divide-y-[1.5px] @min-[760px]:grid-cols-3 @min-[760px]:divide-x-[1.5px] @min-[760px]:divide-y-0"
+        class="divide-ink grid grid-cols-1 divide-y-[1.2px] @min-[608px]:grid-cols-3 @min-[608px]:divide-x-[1.2px] @min-[608px]:divide-y-0"
       >
         <div
           v-for="stat in statBlocks"
           :key="stat.label"
-          class="flex flex-col items-center gap-1 px-3 py-[22px] text-center"
+          class="flex flex-col items-center gap-1 px-3 py-[17.6px] text-center"
         >
           <span class="text-accent text-stat leading-[1.1] font-bold tracking-[-0.02em]">{{
             stat.value
@@ -84,15 +84,15 @@ const roles = computed(() =>
       <article
         v-for="(role, index) in roles"
         :key="role.title"
-        class="flex overflow-hidden [--rail:56px] sm:[--rail:76px]"
+        class="flex overflow-hidden [--rail:44.8px] sm:[--rail:60.8px]"
       >
         <div aria-hidden="true" class="flex-[0_0_var(--rail)]"></div>
         <div
           class="flex min-w-0 flex-auto flex-col gap-3.5 pr-5 sm:pr-7"
           :class="index === 0 ? 'pt-7 pb-6' : 'pt-6 pb-7'"
         >
-          <div class="flex flex-wrap items-center gap-[10px]" :class="MONO_LABEL">
-            <span v-if="role.isCurrent" class="bg-accent px-2 py-[3px] font-bold text-white"
+          <div class="flex flex-wrap items-center gap-[8px]" :class="MONO_LABEL">
+            <span v-if="role.isCurrent" class="bg-accent px-2 py-[2.4px] font-bold text-white"
               >ACTUEL</span
             >
             <span class="text-muted">{{ role.meta }}</span>
@@ -111,7 +111,7 @@ const roles = computed(() =>
                 class="bg-ink absolute top-1/2 left-1/2 h-[100vh] w-0.5 -translate-x-1/2"
               ></span>
               <span
-                class="border-ink relative block h-4 w-4 rounded-full border-[1.5px]"
+                class="border-ink relative block h-4 w-4 rounded-full border-[1.2px]"
                 :class="role.isCurrent ? 'bg-accent' : 'bg-bg'"
               ></span>
             </span>
@@ -119,7 +119,7 @@ const roles = computed(() =>
           </div>
           <ul
             v-if="role.bullets"
-            class="text-ink3 text-body m-0 flex list-disc flex-col gap-[10px] pl-5 leading-[1.55]"
+            class="text-ink3 text-body m-0 flex list-disc flex-col gap-[8px] pl-5 leading-[1.55]"
           >
             <li v-for="bullet in role.bullets" :key="bullet">{{ bullet }}</li>
           </ul>
@@ -131,7 +131,7 @@ const roles = computed(() =>
       <article
         v-for="role in roles"
         :key="role.title"
-        class="flex flex-col gap-3 px-5 pt-6 pb-7 sm:pr-7 sm:pl-[104px]"
+        class="flex flex-col gap-3 px-5 pt-6 pb-7 sm:pr-7 sm:pl-[83.2px]"
       >
         <h4 class="text-h4 m-0 leading-[1.2] font-bold">{{ role.title }}</h4>
         <p v-if="role.summary" class="text-ink3 text-body m-0 leading-[1.55]">
@@ -139,7 +139,7 @@ const roles = computed(() =>
         </p>
         <ul
           v-if="role.bullets"
-          class="text-ink3 text-body m-0 flex list-disc flex-col gap-[10px] pl-5 leading-[1.55]"
+          class="text-ink3 text-body m-0 flex list-disc flex-col gap-[8px] pl-5 leading-[1.55]"
         >
           <li v-for="bullet in role.bullets" :key="bullet">{{ bullet }}</li>
         </ul>

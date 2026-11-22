@@ -12,7 +12,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const LABEL_CLASS = 'text-ink2 font-mono text-label tracking-[0.1em]'
 const FIELD_CLASS =
-  'bg-field text-ink w-full border-[1.5px] font-sans text-body outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'
+  'bg-field text-ink w-full border-[1.2px] font-sans text-body outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'
 const ERROR_CLASS = 'text-accent font-mono text-meta tracking-[0.06em]'
 
 // #region Data
@@ -77,7 +77,7 @@ async function handleSubmit(): Promise<void> {
     <form
       v-if="isConfigured"
       novalidate
-      class="border-ink bg-surf flex flex-col gap-[22px] border-[1.5px] p-5 sm:p-8"
+      class="border-ink bg-surf flex flex-col gap-[17.6px] border-[1.2px] p-5 sm:p-8"
       @submit.prevent="handleSubmit"
     >
       <div class="flex flex-wrap gap-5">
@@ -90,7 +90,7 @@ async function handleSubmit(): Promise<void> {
             autocomplete="name"
             :aria-invalid="Boolean(errors.name)"
             :class="[FIELD_CLASS, borderClass(errors.name)]"
-            class="h-12 px-[14px]"
+            class="h-12 px-[11.2px]"
             @input="errors.name = ''"
           />
           <span v-if="errors.name" :class="ERROR_CLASS">{{ errors.name }}</span>
@@ -105,7 +105,7 @@ async function handleSubmit(): Promise<void> {
             autocomplete="email"
             :aria-invalid="Boolean(errors.email)"
             :class="[FIELD_CLASS, borderClass(errors.email)]"
-            class="h-12 px-[14px]"
+            class="h-12 px-[11.2px]"
             @input="errors.email = ''"
           />
           <span v-if="errors.email" :class="ERROR_CLASS">{{ errors.email }}</span>
@@ -120,7 +120,7 @@ async function handleSubmit(): Promise<void> {
           rows="5"
           :aria-invalid="Boolean(errors.message)"
           :class="[FIELD_CLASS, borderClass(errors.message)]"
-          class="resize-y p-[14px]"
+          class="resize-y p-[11.2px]"
           @input="errors.message = ''"
         />
         <span v-if="errors.message" :class="ERROR_CLASS">{{ errors.message }}</span>
@@ -128,7 +128,7 @@ async function handleSubmit(): Promise<void> {
 
       <div class="flex flex-wrap items-center gap-4">
         <BaseButton variant="primary" type="submit" :disabled="isSending">
-          <AppIcon v-if="isSending" name="loader" :size="14" class="animate-spin" />
+          <AppIcon v-if="isSending" name="loader" :size="11.2" class="animate-spin" />
           <AppSvgIcon v-else name="send" />
           {{ isSending ? 'Envoi…' : 'Envoyer' }}
         </BaseButton>
@@ -138,7 +138,7 @@ async function handleSubmit(): Promise<void> {
           role="status"
           class="text-sage text-label inline-flex items-center gap-1.5 font-mono tracking-[0.06em]"
         >
-          <AppIcon name="success" :size="14" />
+          <AppIcon name="success" :size="11.2" />
           Message envoyé, merci !
         </span>
         <span
@@ -146,13 +146,13 @@ async function handleSubmit(): Promise<void> {
           role="alert"
           class="text-accent text-label inline-flex items-center gap-1.5 font-mono tracking-[0.06em]"
         >
-          <AppIcon name="error" :size="14" />
+          <AppIcon name="error" :size="11.2" />
           Échec de l'envoi, réessaie plus tard.
         </span>
       </div>
     </form>
 
-    <div v-else class="border-ink bg-surf text-ink2 text-body border-[1.5px] p-8">
+    <div v-else class="border-ink bg-surf text-ink2 text-body border-[1.2px] p-8">
       Contact indisponible pour le moment.
     </div>
   </section>

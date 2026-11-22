@@ -12,7 +12,7 @@
     <!-- Boutons à droite du titre : défilent sur mobile, marge de 4 px pour le focus soulevé -->
     <div
       v-if="$slots.actions"
-      class="-m-1 max-w-[calc(100%+8px)] min-w-0 [scrollbar-width:none] overflow-x-auto p-1 [&::-webkit-scrollbar]:hidden"
+      class="-m-1 max-w-[calc(100%+6.4px)] min-w-0 [scrollbar-width:none] overflow-x-auto p-1 [&::-webkit-scrollbar]:hidden"
     >
       <slot name="actions" />
     </div>

@@ -8,7 +8,7 @@ import ActivityTooltip from '@/components/ActivityTooltip.vue'
 /** Semaines en bord de graphe où l'infobulle s'aligne sur la case au lieu d'être centrée. */
 const EDGE_WEEKS = 8
 /** Écart entre la case et l'infobulle, flèche comprise. */
-const TOOLTIP_GAP = 10
+const TOOLTIP_GAP = 8
 /** Délai avant apparition : évite le clignotement quand on balaie la grille. */
 const SHOW_DELAY_MS = 80
 /** Durée du fondu de sortie, après quoi le contenu est retiré. */
@@ -47,7 +47,7 @@ const days = computed(() => weeks.value.flatMap((week) => week.days))
 const anchorStyle = computed(() => {
   if (!position.value) return { visibility: 'hidden' as const }
   const { left, top, align, below } = position.value
-  const tx = align === 'start' ? '-22px' : align === 'end' ? 'calc(-100% + 22px)' : '-50%'
+  const tx = align === 'start' ? '-17.6px' : align === 'end' ? 'calc(-100% + 17.6px)' : '-50%'
   return {
     left: `${left}px`,
     top: `${top}px`,
@@ -58,7 +58,7 @@ const anchorStyle = computed(() => {
 const arrowStyle = computed(() => {
   const align = position.value?.align
   const marginLeft =
-    align === 'start' ? '13px' : align === 'end' ? 'calc(100% - 31px)' : 'calc(50% - 9px)'
+    align === 'start' ? '10.4px' : align === 'end' ? 'calc(100% - 24.8px)' : 'calc(50% - 7.2px)'
   return { marginLeft }
 })
 // #endregion
@@ -176,7 +176,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="activity" class="mt-16 mb-[72px] flex flex-col gap-5">
+  <section id="activity" class="mt-16 mb-[57.6px] flex flex-col gap-5">
     <SectionHeading>
       /activity
       <template v-if="updated" #meta>Mis à jour le {{ updated }}</template>
@@ -185,19 +185,19 @@ onUnmounted(() => {
     <!-- 3 cases égales, alignées sur les colonnes de /skills ; empilées en dessous du même seuil -->
     <div class="@container">
       <div
-        class="border-ink divide-ink grid grid-cols-1 divide-y-[1.5px] border-[1.5px] @min-[760px]:grid-cols-3 @min-[760px]:divide-x-[1.5px] @min-[760px]:divide-y-0"
+        class="border-ink divide-ink grid grid-cols-1 divide-y-[1.2px] border-[1.2px] @min-[608px]:grid-cols-3 @min-[608px]:divide-x-[1.2px] @min-[608px]:divide-y-0"
       >
-        <div class="bg-accent flex min-w-0 flex-col gap-1.5 px-6 py-[22px] text-white">
+        <div class="bg-accent flex min-w-0 flex-col gap-1.5 px-6 py-[17.6px] text-white">
           <span class="text-stat-lg leading-[1.1] font-bold tracking-[-0.02em]">{{ total }}</span>
           <span class="text-label font-mono tracking-[0.08em]">CONTRIBUTIONS</span>
         </div>
-        <div class="flex min-w-0 flex-col gap-1.5 px-6 py-[22px]">
+        <div class="flex min-w-0 flex-col gap-1.5 px-6 py-[17.6px]">
           <span class="text-stat-sm leading-[1.2] font-bold tracking-[-0.02em]">{{
             sourceTotals.gitlab
           }}</span>
           <span class="text-muted text-label font-mono tracking-[0.08em]"># GITLAB</span>
         </div>
-        <div class="flex min-w-0 flex-col gap-1.5 px-6 py-[22px]">
+        <div class="flex min-w-0 flex-col gap-1.5 px-6 py-[17.6px]">
           <span class="text-stat-sm leading-[1.2] font-bold tracking-[-0.02em]">{{
             sourceTotals.github
           }}</span>
@@ -208,7 +208,7 @@ onUnmounted(() => {
 
     <div
       ref="boxEl"
-      class="border-ink bg-surf relative [overflow-x:clip] border-[1.5px] p-5 sm:p-7"
+      class="border-ink bg-surf relative [overflow-x:clip] border-[1.2px] p-5 sm:p-7"
     >
       <div
         ref="scrollEl"
@@ -219,7 +219,7 @@ onUnmounted(() => {
           ref="gridEl"
           role="group"
           aria-label="Contributions par jour sur 12 mois"
-          class="flex w-max gap-1 p-[3px]"
+          class="flex w-max gap-1 p-[2.4px]"
           @mouseleave="hide"
           @keydown="handleKeydown"
         >
@@ -249,17 +249,17 @@ onUnmounted(() => {
         :id="TOOLTIP_ID"
         ref="tipEl"
         role="tooltip"
-        class="pointer-events-none absolute z-20 w-[288px]"
+        class="pointer-events-none absolute z-20 w-[230.4px]"
         :style="anchorStyle"
       >
         <div class="pop" :class="{ 'is-shown': isVisible, 'is-below': position?.below }">
           <svg
             v-if="position?.below"
-            width="18"
-            height="10"
+            width="14.4"
+            height="8"
             viewBox="0 0 18 10"
             aria-hidden="true"
-            class="-mb-[1.5px] block"
+            class="-mb-[1.2px] block"
             :style="arrowStyle"
           >
             <path
@@ -276,11 +276,11 @@ onUnmounted(() => {
           />
           <svg
             v-if="!position?.below"
-            width="18"
-            height="10"
+            width="14.4"
+            height="8"
             viewBox="0 0 18 10"
             aria-hidden="true"
-            class="-mt-[1.5px] block"
+            class="-mt-[1.2px] block"
             :style="arrowStyle"
           >
             <path
@@ -294,7 +294,7 @@ onUnmounted(() => {
       </div>
 
       <div
-        class="text-muted text-label mt-[18px] flex w-full flex-wrap justify-between gap-4 font-mono"
+        class="text-muted text-label mt-[14.4px] flex w-full flex-wrap justify-between gap-4 font-mono"
       >
         <span>{{ rangeLabel }}</span>
         <span class="flex items-center gap-1">
@@ -317,29 +317,29 @@ onUnmounted(() => {
   all: unset;
   box-sizing: border-box;
   display: block;
-  width: 14px;
-  height: 14px;
-  border: 1px solid var(--line2);
+  width: 11.2px;
+  height: 11.2px;
+  border: 0.8px solid var(--line2);
   cursor: crosshair;
 }
 
 .cell:focus-visible,
 .cell.is-active {
-  outline: 2px solid var(--ink);
-  outline-offset: 1px;
+  outline: 1.6px solid var(--ink);
+  outline-offset: 0.8px;
 }
 
 /* Apparition : fondu + montée de 4 px ; sortie plus courte */
 .pop {
   opacity: 0;
-  transform: translateY(4px);
+  transform: translateY(3.2px);
   transition:
     opacity var(--dur-fast) var(--ease-color),
     transform var(--dur-fast) var(--ease-color);
 }
 
 .pop.is-below {
-  transform: translateY(-4px);
+  transform: translateY(-3.2px);
 }
 
 .pop.is-shown {

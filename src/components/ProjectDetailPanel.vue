@@ -19,21 +19,21 @@ defineEmits<{
 </script>
 
 <template>
-  <div class="border-ink bg-surf flex flex-wrap border-r-[1.5px] border-b-[1.5px]">
+  <div class="border-ink bg-surf flex flex-wrap border-r-[1.2px] border-b-[1.2px]">
     <div
       class="pj-col border-ink flex min-w-0 flex-col gap-3 p-5 sm:p-7"
       :class="
-        wide ? 'flex-[0_0_calc(50%+0.5px)] border-r-[1.5px]' : 'flex-[1_1_100%] border-b-[1.5px]'
+        wide ? 'flex-[0_0_calc(50%+0.4px)] border-r-[1.2px]' : 'flex-[1_1_100%] border-b-[1.2px]'
       "
     >
       <div
         v-if="project.type === 'script' && project.terminal"
-        class="bg-ph text-label flex h-[300px] flex-col p-[22px] font-mono leading-[1.8] text-[#c9c2b5]"
+        class="bg-ph text-label flex h-[240px] flex-col p-[17.6px] font-mono leading-[1.8] text-[#c9c2b5]"
       >
         <span v-for="(line, i) in project.terminal" :key="i">{{ line }}</span>
       </div>
       <template v-else>
-        <div class="bg-ph h-[240px] overflow-hidden sm:h-[300px]">
+        <div class="bg-ph h-[192px] overflow-hidden sm:h-[240px]">
           <img
             v-if="project.image"
             :src="project.image"
@@ -42,7 +42,7 @@ defineEmits<{
           />
         </div>
         <div v-if="project.gallery?.length" class="grid grid-cols-3 gap-3">
-          <div v-for="src in project.gallery.slice(0, 3)" :key="src" class="bg-ph h-[76px]">
+          <div v-for="src in project.gallery.slice(0, 3)" :key="src" class="bg-ph h-[60.8px]">
             <img :src="src" alt="" loading="lazy" class="block h-full w-full object-cover" />
           </div>
         </div>
@@ -55,7 +55,7 @@ defineEmits<{
     >
       <div class="flex items-start justify-between gap-4">
         <div class="flex min-w-0 flex-col gap-2">
-          <span class="flex flex-wrap items-center gap-[10px]">
+          <span class="flex flex-wrap items-center gap-[8px]">
             <TypeBadge :type="project.type" />
             <span class="text-muted text-meta font-mono">{{ project.year }}</span>
           </span>
@@ -76,7 +76,7 @@ defineEmits<{
       <div class="flex flex-col gap-2">
         <span class="text-meta font-mono font-bold tracking-[0.1em]">MON RÔLE</span>
         <ul
-          class="text-ink3 text-small m-0 flex list-disc flex-col gap-1.5 pl-[18px] leading-[1.5]"
+          class="text-ink3 text-small m-0 flex list-disc flex-col gap-1.5 pl-[14.4px] leading-[1.5]"
         >
           <li v-for="item in project.did" :key="item">{{ item }}</li>
         </ul>
@@ -88,7 +88,7 @@ defineEmits<{
           <span
             v-for="tech in project.stack"
             :key="tech"
-            class="border-line2 border px-2 py-[3px]"
+            class="border-line2 border px-2 py-[2.4px]"
             >{{ tech }}</span
           >
         </span>

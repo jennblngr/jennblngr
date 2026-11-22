@@ -18,7 +18,7 @@ useKeyboardNavigation(SECTIONS)
 <template>
   <div class="bg-bg text-ink text-body min-h-screen font-sans leading-[1.55]">
     <NavBar />
-    <main id="top" class="mx-auto max-w-[1120px] px-6 pb-16">
+    <main id="top" class="mx-auto max-w-[896px] px-6 pb-16">
       <HeroHeader />
       <ActivitySection />
       <SkillsSection />

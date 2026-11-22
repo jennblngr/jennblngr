@@ -54,7 +54,7 @@ function srDetail(item: SkillEntry, unit?: string): string {
 </script>
 
 <template>
-  <section id="skills" class="mb-[72px] flex flex-col gap-5">
+  <section id="skills" class="mb-[57.6px] flex flex-col gap-5">
     <SectionHeading>
       /skills
       <template #actions>
@@ -93,21 +93,21 @@ function srDetail(item: SkillEntry, unit?: string): string {
     -->
     <div class="@container">
       <div
-        class="border-ink grid grid-cols-1 border-t-[1.5px] border-l-[1.5px] @min-[760px]:grid-cols-3"
+        class="border-ink grid grid-cols-1 border-t-[1.2px] border-l-[1.2px] @min-[608px]:grid-cols-3"
       >
         <div
           v-for="column in columns"
           :key="column.title"
-          class="border-ink text-small flex min-w-0 flex-col gap-0.5 border-r-[1.5px] border-b-[1.5px] p-[26px] font-mono leading-[1.7]"
+          class="border-ink text-small flex min-w-0 flex-col gap-0.5 border-r-[1.2px] border-b-[1.2px] p-[20.8px] font-mono leading-[1.7]"
         >
           <span
             aria-hidden="true"
-            class="border-ink text-h4 mb-4 flex h-[54px] w-[54px] items-center justify-center border-[1.5px] font-sans leading-none font-bold"
+            class="border-ink text-h4 mb-4 flex h-[43.2px] w-[43.2px] items-center justify-center border-[1.2px] font-sans leading-none font-bold"
             :class="column.tone === 'sage' && 'bg-sage text-white'"
             >{{ column.letter }}</span
           >
           <div
-            class="border-ink mb-1.5 flex items-baseline justify-between gap-3 border-b-[1.5px] pb-2.5"
+            class="border-ink mb-1.5 flex items-baseline justify-between gap-3 border-b-[1.2px] pb-2.5"
           >
             <h3 class="text-h4 m-0 font-sans leading-[1.1] font-bold tracking-[-0.01em]">
               {{ column.title }}
@@ -124,7 +124,7 @@ function srDetail(item: SkillEntry, unit?: string): string {
               class="tree-item"
               :class="{ 'is-fav': item.favorite }"
             >
-              <div class="flex items-center gap-2.5 py-[3px]">
+              <div class="flex items-center gap-2.5 py-[2.4px]">
                 <span class="whitespace-nowrap">{{ item.name }}</span>
                 <span class="sr-only">{{ srDetail(item, column.unit) }}</span>
                 <template v-if="item.projects">
@@ -145,7 +145,13 @@ function srDetail(item: SkillEntry, unit?: string): string {
 
     <div class="text-muted text-meta flex flex-wrap gap-6 font-mono">
       <span v-if="hasFavorites" class="flex items-center gap-1.5">
-        <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" class="block flex-none">
+        <svg
+          width="9.6"
+          height="9.6"
+          viewBox="0 0 16 16"
+          aria-hidden="true"
+          class="block flex-none"
+        >
           <circle cx="8" cy="8" r="7" fill="#c23d22" stroke="currentColor" stroke-width="1.5" />
         </svg>
         techno favorite
@@ -159,7 +165,7 @@ function srDetail(item: SkillEntry, unit?: string): string {
 /* Frise : trait du premier au dernier rond, rond plein rouge = favorite */
 .tree-item {
   position: relative;
-  padding-left: 30px;
+  padding-left: 24px;
 }
 
 .tree-item::before {
@@ -167,8 +173,8 @@ function srDetail(item: SkillEntry, unit?: string): string {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 7px;
-  width: 2px;
+  left: 5.6px;
+  width: 1.6px;
   background: var(--ink);
 }
 
@@ -190,10 +196,10 @@ function srDetail(item: SkillEntry, unit?: string): string {
   top: 50%;
   left: 0;
   box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  margin-top: -8px;
-  border: 1.5px solid var(--ink);
+  width: 12.8px;
+  height: 12.8px;
+  margin-top: -6.4px;
+  border: 1.2px solid var(--ink);
   border-radius: 50%;
   background: var(--bg);
 }

@@ -26,8 +26,8 @@ watch(activeId, (id) => {
 </script>
 
 <template>
-  <header class="border-ink bg-bg sticky top-0 z-30 border-b-[1.5px]">
-    <div class="mx-auto flex max-w-[1120px] items-center justify-between gap-5 px-6 py-[14px]">
+  <header class="border-ink bg-bg sticky top-0 z-30 border-b-[1.2px]">
+    <div class="mx-auto flex max-w-[896px] items-center justify-between gap-5 px-6 py-[11.2px]">
       <!-- padding 4 px : laisse la place au focus soulevé, qui sinon serait rogné -->
       <div
         ref="scrollEl"

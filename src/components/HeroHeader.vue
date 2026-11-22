@@ -12,20 +12,20 @@ const years = Math.floor(monthsBetween(CAREER_START) / 12)
 </script>
 
 <template>
-  <section class="border-ink flex flex-wrap gap-8 border-b-[1.5px] pt-14 pb-12">
+  <section class="border-ink flex flex-wrap gap-8 border-b-[1.2px] pt-14 pb-12">
     <div
       class="flex flex-none flex-col items-center gap-1.5"
       :aria-label="`${years} ans d'expérience`"
     >
       <svg
-        width="26"
-        height="26"
+        width="20.8"
+        height="20.8"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2.2"
+        stroke-width="1.76"
         aria-hidden="true"
-        class="text-accent -mt-[3px] block"
+        class="text-accent -mt-[2.4px] block"
       >
         <path d="M6 15l6-6 6 6" />
       </svg>
@@ -33,7 +33,7 @@ const years = Math.floor(monthsBetween(CAREER_START) / 12)
       <span class="text-muted text-micro font-mono tracking-[0.08em]" aria-hidden="true">ANS</span>
     </div>
 
-    <div class="flex min-w-0 flex-[1_1_560px] flex-col gap-[22px]">
+    <div class="flex min-w-0 flex-[1_1_560px] flex-col gap-[17.6px]">
       <div class="text-muted text-mono font-mono tracking-[0.08em]">DÉVELOPPEUSE FRONT-END</div>
       <h1 class="text-display m-0 leading-[0.95] font-bold tracking-[-0.035em]">
         Jenny-Lee<br />Boulanger
@@ -51,12 +51,18 @@ const years = Math.floor(monthsBetween(CAREER_START) / 12)
             :href="social.href"
             external
           >
-            <AppIcon :name="social.icon" :size="14" aria-hidden="true" />
+            <AppIcon :name="social.icon" :size="11.2" aria-hidden="true" />
             {{ social.label }}
           </BaseButton>
         </ButtonGroup>
         <span class="chip chip--sage">
-          <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true" class="block flex-none">
+          <svg
+            width="6.4"
+            height="6.4"
+            viewBox="0 0 8 8"
+            aria-hidden="true"
+            class="block flex-none"
+          >
             <circle cx="4" cy="4" r="4" fill="currentColor" />
           </svg>
           Disponible

@@ -24,7 +24,7 @@ const experience = computed(() =>
 </script>
 
 <template>
-  <section id="experience" class="mb-[72px] flex flex-col gap-5">
+  <section id="experience" class="mb-[57.6px] flex flex-col gap-5">
     <SectionHeading>/experience</SectionHeading>
     <ListRenderer v-slot="{ item }" :items="experience">
       <ExperienceEntry :experience="item" />

@@ -36,7 +36,7 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
   >
     <span
       v-if="project.type === 'script' && project.terminal"
-      class="bg-ph text-micro flex h-[150px] flex-col overflow-hidden p-[14px] font-mono leading-[1.7] text-[#c9c2b5]"
+      class="bg-ph text-micro flex h-[120px] flex-col overflow-hidden p-[11.2px] font-mono leading-[1.7] text-[#c9c2b5]"
       aria-hidden="true"
     >
       <span
@@ -46,7 +46,7 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
         >{{ line }}</span
       >
     </span>
-    <span v-else class="bg-ph block h-[150px] overflow-hidden">
+    <span v-else class="bg-ph block h-[120px] overflow-hidden">
       <img
         v-if="project.image"
         :src="project.image"
@@ -69,15 +69,15 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
     >
 
     <span
-      class="text-ink2 text-meta flex h-[58px] flex-wrap content-start gap-1.5 overflow-hidden font-mono"
+      class="text-ink2 text-meta flex h-[46.4px] flex-wrap content-start gap-1.5 overflow-hidden font-mono"
     >
-      <span v-for="tech in stackPreview" :key="tech" class="border-line2 border px-2 py-[3px]">{{
+      <span v-for="tech in stackPreview" :key="tech" class="border-line2 border px-2 py-[2.4px]">{{
         tech
       }}</span>
     </span>
 
     <span
-      class="border-line2 text-meta mt-auto flex min-h-[47px] items-center justify-end gap-2 border-t border-dashed pt-3 font-mono tracking-[0.06em]"
+      class="border-line2 text-meta mt-auto flex min-h-[37.6px] items-center justify-end gap-2 border-t border-dashed pt-3 font-mono tracking-[0.06em]"
     >
       <!-- Toute la carte est le bouton : celui-ci n'est qu'un repère visuel -->
       <BaseButton size="sm" decorative :selected="isOpen">
@@ -96,13 +96,13 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 22px;
+  gap: 11.2px;
+  padding: 17.6px;
   cursor: pointer;
   color: var(--ink);
   background: var(--bg);
-  border-right: 1.5px solid var(--ink);
-  border-bottom: 1.5px solid var(--ink);
+  border-right: 1.2px solid var(--ink);
+  border-bottom: 1.2px solid var(--ink);
   text-align: left;
   transition: background-color var(--dur-fast) var(--ease-color);
 }
@@ -112,8 +112,8 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
 }
 
 .pj-card:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: -5px;
+  outline: 1.6px solid var(--color-accent);
+  outline-offset: -4px;
 }
 
 .pj-card.is-open {
@@ -123,10 +123,10 @@ const stackPreview = computed(() => props.project.stack.slice(0, STACK_PREVIEW))
 .pj-card.is-open::after {
   content: '';
   position: absolute;
-  right: 22px;
+  right: 17.6px;
   bottom: 0;
-  left: 22px;
-  height: 4px;
+  left: 17.6px;
+  height: 3.2px;
   background: var(--color-accent);
 }
 </style>

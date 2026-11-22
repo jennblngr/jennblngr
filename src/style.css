@@ -19,27 +19,27 @@
 
   /*
    * Échelle typographique, en rem pour suivre la taille de police choisie dans le navigateur.
-   * La racine est à 75 % (12 px avec le réglage par défaut du navigateur) ;
+   * La racine est à 60 % (9,6 px avec le réglage par défaut du navigateur) ;
    * les valeurs en px indiquées correspondent à cette base.
    */
-  --text-display: clamp(3rem, 8vw, 6.5rem); /* 36 → 78 · nom du hero */
-  --text-stat-lg: 2.75rem; /* 33 · total des contributions */
-  --text-stat: 2.5rem; /* 30 · chiffres de l'expérience */
-  --text-h2: 2.25rem; /* 27 · titres de section */
-  --text-title: 2.125rem; /* 25,5 · total de l'infobulle */
-  --text-stat-sm: 2rem; /* 24 · totaux GitLab / GitHub, titre du panneau projet */
-  --text-h3: 1.875rem; /* 22,5 · nom de l'entreprise */
-  --text-title-sm: 1.75rem; /* 21 · titre du panneau projet sur mobile */
-  --text-h4: 1.625rem; /* 19,5 · titres de carte et de poste */
-  --text-card: 1.3125rem; /* 15,75 · titre de carte projet */
-  --text-lead: 1.125rem; /* 13,5 · accroches courtes */
-  --text-body: 1.0625rem; /* 12,75 · texte courant */
-  --text-body-sm: 1rem; /* 12 · sous-titres */
-  --text-small: 0.9375rem; /* 11,25 · texte secondaire */
-  --text-mono: 0.875rem; /* 10,5 · chips et label du hero */
-  --text-label: 0.8125rem; /* 9,75 · labels mono */
-  --text-meta: 0.75rem; /* 9 · méta, badges de stack */
-  --text-micro: 0.6875rem; /* 8,25 · badges de type, mentions */
+  --text-display: clamp(3rem, 6.4vw, 6.5rem); /* 28,8 → 62,4 · nom du hero */
+  --text-stat-lg: 2.75rem; /* 26,4 · total des contributions */
+  --text-stat: 2.5rem; /* 24 · chiffres de l'expérience */
+  --text-h2: 2.25rem; /* 21,6 · titres de section */
+  --text-title: 2.125rem; /* 20,4 · total de l'infobulle */
+  --text-stat-sm: 2rem; /* 19,2 · totaux GitLab / GitHub, titre du panneau projet */
+  --text-h3: 1.875rem; /* 18 · nom de l'entreprise */
+  --text-title-sm: 1.75rem; /* 16,8 · titre du panneau projet sur mobile */
+  --text-h4: 1.625rem; /* 15,6 · titres de carte et de poste */
+  --text-card: 1.3125rem; /* 12,6 · titre de carte projet */
+  --text-lead: 1.125rem; /* 10,8 · accroches courtes */
+  --text-body: 1.0625rem; /* 10,2 · texte courant */
+  --text-body-sm: 1rem; /* 9,6 · sous-titres */
+  --text-small: 0.9375rem; /* 9 · texte secondaire */
+  --text-mono: 0.875rem; /* 8,4 · chips et label du hero */
+  --text-label: 0.8125rem; /* 7,8 · labels mono */
+  --text-meta: 0.75rem; /* 7,2 · méta, badges de stack */
+  --text-micro: 0.6875rem; /* 6,6 · badges de type, mentions */
 }
 
 @theme inline {
@@ -57,8 +57,6 @@
 }
 
 :root {
-  /* Échelle globale de l'interface : 0.8 = rendu d'un zoom navigateur à 80 % */
-  --ui-zoom: 0.8;
 }
 
 :root,
@@ -104,10 +102,8 @@
 
 @layer base {
   html {
-    font-size: 75%; /* 12 px, en gardant la préférence du navigateur */
-    /* Échelle globale de l'interface (texte, espacements, bordures), comme un zoom navigateur */
-    zoom: var(--ui-zoom);
-    scroll-padding-top: 88px;
+    font-size: 60%; /* 9,6 px, en gardant la préférence du navigateur */
+    scroll-padding-top: 70.4px;
   }
 
   body {
@@ -127,8 +123,8 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 3px;
+    outline: 1.6px solid var(--color-accent);
+    outline-offset: 2.4px;
   }
 }
 
@@ -167,10 +163,10 @@
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    height: 42px;
-    padding: 0 16px;
-    border: 1.5px solid var(--ink);
+    gap: 6.4px;
+    height: 33.6px;
+    padding: 0 12.8px;
+    border: 1.2px solid var(--ink);
     background: transparent;
     color: var(--ink);
     font-family: var(--font-mono);
@@ -192,8 +188,8 @@
   .btn svg {
     display: block;
     flex: 0 0 auto;
-    width: 14px;
-    height: 14px;
+    width: 11.2px;
+    height: 11.2px;
   }
 
   .btn:hover {
@@ -204,7 +200,7 @@
   /* Appui : descend de 1 px */
   .btn:active {
     background: var(--pressed);
-    transform: translateY(1px);
+    transform: translateY(0.8px);
     transition-duration: var(--dur-instant);
   }
 
@@ -212,12 +208,12 @@
   .btn:focus-visible {
     z-index: 1;
     outline: none;
-    transform: translate(-3px, -3px);
-    box-shadow: 3px 3px 0 var(--color-accent);
+    transform: translate(-2.4px, -2.4px);
+    box-shadow: 2.4px 2.4px 0 var(--color-accent);
   }
 
   .btn:focus-visible:active {
-    transform: translate(-3px, -2px);
+    transform: translate(-2.4px, -1.6px);
   }
 
   .btn:not(.btn--primary, .is-sel):focus-visible {
@@ -243,7 +239,7 @@
   }
 
   .btn--primary:focus-visible {
-    box-shadow: 3px 3px 0 var(--ink);
+    box-shadow: 2.4px 2.4px 0 var(--ink);
   }
 
   .btn.is-sel,
@@ -254,27 +250,27 @@
   }
 
   .btn.is-sel:focus-visible {
-    box-shadow: 3px 3px 0 var(--color-accent);
+    box-shadow: 2.4px 2.4px 0 var(--color-accent);
   }
 
   .btn--sm {
-    height: 34px;
-    padding: 0 12px;
+    height: 27.2px;
+    padding: 0 9.6px;
     font-size: var(--text-meta);
   }
 
   .btn--icon {
-    width: 42px;
+    width: 33.6px;
     padding: 0;
   }
 
   .btn--icon svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 
   .btn--sm.btn--icon {
-    width: 34px;
+    width: 27.2px;
   }
 
   .btn:disabled,
@@ -290,7 +286,7 @@
   }
 
   .btn-group > .btn + .btn {
-    margin-left: -1.5px;
+    margin-left: -1.2px;
   }
 
   .btn-group--wrap {
@@ -298,17 +294,17 @@
   }
 
   .btn-group--wrap > .btn {
-    margin-bottom: -1.5px;
+    margin-bottom: -1.2px;
   }
 
   .chip {
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    height: 42px;
-    padding: 0 16px;
-    border: 1.5px solid var(--ink);
+    gap: 6.4px;
+    height: 33.6px;
+    padding: 0 12.8px;
+    border: 1.2px solid var(--ink);
     font-family: var(--font-mono);
     font-size: var(--text-label);
     font-weight: 700;
@@ -337,4 +333,3 @@
     }
   }
 }
-
