@@ -74,7 +74,7 @@ defineEmits<{
       <p class="text-ink3 text-body m-0 leading-[1.55]">{{ project.desc }}</p>
 
       <div class="flex flex-col gap-2">
-        <span class="text-meta font-mono font-bold tracking-[0.1em]">CE QUE J'AI FAIT</span>
+        <span class="text-meta font-mono font-bold tracking-[0.1em]">MON RÔLE</span>
         <ul
           class="text-ink3 text-small m-0 flex list-disc flex-col gap-1.5 pl-[18px] leading-[1.5]"
         >
