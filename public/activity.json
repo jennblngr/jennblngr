@@ -1,13 +1,6 @@
 {
-  "start": "2025-11-17",
+  "start": "2025-11-24",
   "counts": [
-    18,
-    31,
-    1,
-    11,
-    21,
-    0,
-    0,
     38,
     43,
     52,
@@ -369,63 +362,11 @@
     13,
     1,
     1,
-    1,
+    2,
+    3,
     1
   ],
   "details": [
-    {
-      "github": 0,
-      "gitlab": 18,
-      "gitlabByType": {
-        "merge_request": 4,
-        "push": 11,
-        "autre": 2,
-        "commentaire": 1
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 31,
-      "gitlabByType": {
-        "push": 11,
-        "merge_request": 13,
-        "autre": 6,
-        "commentaire": 1
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 1,
-      "gitlabByType": {
-        "commentaire": 1
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 11,
-      "gitlabByType": {
-        "merge_request": 3,
-        "push": 8
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 21,
-      "gitlabByType": {
-        "commentaire": 16,
-        "push": 3,
-        "autre": 1,
-        "merge_request": 1
-      }
-    },
-    {
-      "github": 0,
-      "gitlab": 0
-    },
-    {
-      "github": 0,
-      "gitlab": 0
-    },
     {
       "github": 0,
       "gitlab": 38,
@@ -3176,7 +3117,11 @@
       "gitlab": 0
     },
     {
-      "github": 1,
+      "github": 2,
+      "gitlab": 0
+    },
+    {
+      "github": 3,
       "gitlab": 0
     },
     {
@@ -3184,6 +3129,6 @@
       "gitlab": 0
     }
   ],
-  "updated": "21 nov. 2026",
+  "updated": "22 nov. 2026",
   "source": "GitHub + GitLab"
 }
