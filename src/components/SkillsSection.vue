@@ -87,51 +87,59 @@ function srDetail(item: SkillEntry, unit?: string): string {
       </template>
     </SectionHeading>
 
-    <div class="border-ink flex flex-wrap border-t-[1.5px] border-l-[1.5px]">
+    <!--
+      3 colonnes égales tant que la plus large (« documentation technique », ~242 px) tient,
+      puis directement 1 colonne / 3 lignes, sans passer par 2 + 1.
+    -->
+    <div class="@container">
       <div
-        v-for="column in columns"
-        :key="column.title"
-        class="border-ink text-small flex min-w-0 flex-[1_1_300px] flex-col gap-0.5 border-r-[1.5px] border-b-[1.5px] p-[26px] font-mono leading-[1.7]"
+        class="border-ink grid grid-cols-1 border-t-[1.5px] border-l-[1.5px] @min-[760px]:grid-cols-3"
       >
-        <span
-          aria-hidden="true"
-          class="border-ink text-h4 mb-4 flex h-[54px] w-[54px] items-center justify-center border-[1.5px] font-sans leading-none font-bold"
-          :class="column.tone === 'sage' && 'bg-sage text-white'"
-          >{{ column.letter }}</span
-        >
         <div
-          class="border-ink mb-1.5 flex items-baseline justify-between gap-3 border-b-[1.5px] pb-2.5"
+          v-for="column in columns"
+          :key="column.title"
+          class="border-ink text-small flex min-w-0 flex-col gap-0.5 border-r-[1.5px] border-b-[1.5px] p-[26px] font-mono leading-[1.7]"
         >
-          <h3 class="text-h4 m-0 font-sans leading-[1.1] font-bold tracking-[-0.01em]">
-            {{ column.title }}
-          </h3>
-          <span v-if="column.unit" class="text-muted text-micro tracking-[0.08em] uppercase">{{
-            column.unit
-          }}</span>
-        </div>
-
-        <ul class="tree m-0 list-none p-0 pt-1.5">
-          <li
-            v-for="item in column.items"
-            :key="item.name"
-            class="tree-item"
-            :class="{ 'is-fav': item.favorite }"
+          <span
+            aria-hidden="true"
+            class="border-ink text-h4 mb-4 flex h-[54px] w-[54px] items-center justify-center border-[1.5px] font-sans leading-none font-bold"
+            :class="column.tone === 'sage' && 'bg-sage text-white'"
+            >{{ column.letter }}</span
           >
-            <div class="flex items-center gap-2.5 py-[3px]">
-              <span class="whitespace-nowrap">{{ item.name }}</span>
-              <span class="sr-only">{{ srDetail(item, column.unit) }}</span>
-              <template v-if="item.projects">
-                <span
-                  aria-hidden="true"
-                  class="border-line2 min-w-3 flex-auto -translate-y-1 border-b border-dotted"
-                ></span>
-                <span aria-hidden="true" class="text-ink2 min-w-[2ch] text-right">{{
-                  item.projects
-                }}</span>
-              </template>
-            </div>
-          </li>
-        </ul>
+          <div
+            class="border-ink mb-1.5 flex items-baseline justify-between gap-3 border-b-[1.5px] pb-2.5"
+          >
+            <h3 class="text-h4 m-0 font-sans leading-[1.1] font-bold tracking-[-0.01em]">
+              {{ column.title }}
+            </h3>
+            <span v-if="column.unit" class="text-muted text-micro tracking-[0.08em] uppercase">{{
+              column.unit
+            }}</span>
+          </div>
+
+          <ul class="tree m-0 list-none p-0 pt-1.5">
+            <li
+              v-for="item in column.items"
+              :key="item.name"
+              class="tree-item"
+              :class="{ 'is-fav': item.favorite }"
+            >
+              <div class="flex items-center gap-2.5 py-[3px]">
+                <span class="whitespace-nowrap">{{ item.name }}</span>
+                <span class="sr-only">{{ srDetail(item, column.unit) }}</span>
+                <template v-if="item.projects">
+                  <span
+                    aria-hidden="true"
+                    class="border-line2 min-w-3 flex-auto -translate-y-1 border-b border-dotted"
+                  ></span>
+                  <span aria-hidden="true" class="text-ink2 min-w-[2ch] text-right">{{
+                    item.projects
+                  }}</span>
+                </template>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
