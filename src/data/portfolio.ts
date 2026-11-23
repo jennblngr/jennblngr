@@ -130,8 +130,7 @@ export const PROJECTS: readonly ProjectItem[] = [
       'Serveur Node avec SQLite intégré, sauvegardes automatiques et déploiement Docker sur un VPS, avec un serveur Nginx',
     ],
     stack: ['React', 'Vite', 'Node.js', 'SQLite', 'MQTT', 'Docker', 'Nginx'],
-    url: 'https://github.com/jennblngr/3d-print-dashboard',
-    primaryLabel: 'Voir le code',
+    repos: [{ label: 'Code source', href: 'https://github.com/jennblngr/3d-print-dashboard' }],
     image: '/3d-print-dashboard.jpeg',
   },
   {
@@ -147,8 +146,7 @@ export const PROJECTS: readonly ProjectItem[] = [
       'Historique local des erreurs par catégorie et par règle, sur 7 jours, 30 jours ou toute la période',
     ],
     stack: ['JavaScript', 'Manifest V3', 'Shadow DOM', 'API Claude'],
-    url: 'https://github.com/jennblngr/proofmate',
-    primaryLabel: 'Voir le code',
+    repos: [{ label: 'Code source', href: 'https://github.com/jennblngr/proofmate' }],
     image: '/proofmate.jpeg',
   },
   {
