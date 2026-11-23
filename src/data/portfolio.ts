@@ -150,6 +150,22 @@ export const PROJECTS: readonly ProjectItem[] = [
     image: '/proofmate.jpeg',
   },
   {
+    slug: 'tty-fm',
+    name: 'tty.fm',
+    type: 'mobile',
+    year: '2026',
+    desc: "Lecteur de musique auto-hébergé, pour écouter sa propre bibliothèque sur ordinateur et sur mobile. Un serveur installé sur un NAS indexe et diffuse les morceaux, une application native les lit, y compris hors ligne, et un service d'analyse audio propose des recommandations.",
+    did: [
+      'API REST et streaming en Go, avec une base SQLite : recherche plein texte et transcodage à la volée avec ffmpeg',
+      "Application Flutter pour macOS et Android : lecture, file d'attente, mode hors ligne et synchronisation entre appareils en temps réel",
+      'Service de recommandation en Python : analyse audio, similarité entre morceaux, radio infinie et mix du jour',
+      'Intégration continue, releases signées et déploiement Docker sur un NAS',
+    ],
+    stack: ['Flutter', 'Go', 'SQLite', 'Python', 'ffmpeg', 'WebSocket', 'Docker'],
+    repos: [{ label: 'Code source', href: 'https://github.com/jennblngr/tty.fm' }],
+    image: '/tty-fm.jpeg',
+  },
+  {
     slug: 'lea-bergougnoux',
     name: 'Léa Bergougnoux',
     type: 'web',
