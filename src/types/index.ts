@@ -55,9 +55,10 @@ export interface ProjectItem {
   did: string[]
   /** Liste complète ; la carte n'affiche que les 3 premières. */
   stack: string[]
-  url: string
+  /** Lien principal ; absent pour un projet privé (aucun bouton n'est alors affiché). */
+  url?: string
   /** Libellé du lien principal (VOIR LE SITE, OUVRIR L'APP…). */
-  primaryLabel: string
+  primaryLabel?: string
   /** Dépôts publics, un bouton chacun (CODE SOURCE, ou CODE FRONT / CODE BACK si le projet est découpé). */
   repos?: ProjectRepo[]
   image?: string

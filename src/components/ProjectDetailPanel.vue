@@ -118,8 +118,12 @@ const lightbox = ref<InstanceType<typeof ImageLightbox> | null>(null)
       </div>
 
       <!-- p-1 -m-1 : marge pour le focus soulevé -->
-      <ButtonGroup wrap class="-m-1 mt-auto self-start p-1">
-        <BaseButton variant="primary" :href="project.url" external>
+      <ButtonGroup
+        v-if="project.url || project.repos?.length"
+        wrap
+        class="-m-1 mt-auto self-start p-1"
+      >
+        <BaseButton v-if="project.url" variant="primary" :href="project.url" external>
           {{ project.primaryLabel }}
           <AppSvgIcon name="external" />
         </BaseButton>
