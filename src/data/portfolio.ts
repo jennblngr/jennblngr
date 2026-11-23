@@ -1,8 +1,5 @@
 import type { ExperienceGroup, ProjectItem, SectionLink, SkillCategory, SocialLink } from '@/types'
 
-/** Début de l'activité professionnelle, sert au compteur « N ANS » de l'en-tête. */
-export const CAREER_START = '2021-04'
-
 // Le nombre de projets par techno vient de public/skills.json (scripts/sync-skills.mjs) ;
 // les technos absentes de ce fichier n'affichent pas de chiffre.
 // TODO: favorites à choisir (3 à 5), via `favorite: true`.
