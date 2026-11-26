@@ -2336,11 +2336,12 @@
       }
     },
     "2026-11-26": {
-      "count": 12,
+      "count": 44,
       "byType": {
-        "push": 8,
-        "merge_request": 2,
-        "autre": 2
+        "merge_request": 13,
+        "push": 26,
+        "autre": 4,
+        "commentaire": 1
       }
     }
   }
