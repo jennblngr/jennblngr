@@ -2334,6 +2334,14 @@
         "push": 5,
         "autre": 1
       }
+    },
+    "2026-11-26": {
+      "count": 12,
+      "byType": {
+        "push": 8,
+        "merge_request": 2,
+        "autre": 2
+      }
     }
   }
 }
