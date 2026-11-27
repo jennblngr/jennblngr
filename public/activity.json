@@ -350,7 +350,7 @@
     24,
     52,
     38,
-    64,
+    65,
     137,
     119,
     108,
@@ -369,7 +369,7 @@
     6,
     0,
     44,
-    4
+    9
   ],
   "details": [
     {
@@ -3024,7 +3024,7 @@
       }
     },
     {
-      "github": 32,
+      "github": 33,
       "gitlab": 32,
       "gitlabByType": {
         "merge_request": 11,
@@ -3156,7 +3156,7 @@
       }
     },
     {
-      "github": 0,
+      "github": 5,
       "gitlab": 4,
       "gitlabByType": {
         "push": 2,
