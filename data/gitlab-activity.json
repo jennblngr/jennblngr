@@ -2345,11 +2345,12 @@
       }
     },
     "2026-11-27": {
-      "count": 4,
+      "count": 26,
       "byType": {
-        "push": 2,
-        "autre": 1,
-        "merge_request": 1
+        "autre": 5,
+        "push": 11,
+        "merge_request": 9,
+        "commentaire": 1
       }
     }
   }
