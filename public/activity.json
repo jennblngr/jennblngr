@@ -370,7 +370,7 @@
     0,
     44,
     31,
-    0
+    4
   ],
   "details": [
     {
@@ -3168,7 +3168,13 @@
     },
     {
       "github": 0,
-      "gitlab": 0
+      "gitlab": 4,
+      "gitlabByType": {
+        "commentaire": 1,
+        "autre": 1,
+        "merge_request": 1,
+        "push": 1
+      }
     }
   ],
   "updated": "28 nov. 2026",
